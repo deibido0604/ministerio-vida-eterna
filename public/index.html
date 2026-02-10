@@ -1,43 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
+    
+    <!-- Favicon y logos -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+    
+    <!-- Meta tags esenciales -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <meta name="theme-color" content="#1e40af" />
+    <meta name="description" content="Ministerio Vida Eterna - Un lugar de encuentro con Dios, crecimiento espiritual y comunidad cristiana. Únete a nuestro campamento de fe en Honduras." />
+    
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="Ministerio Vida Eterna - Campamento de Fe" />
+    <meta property="og:description" content="Transformamos vidas a través del amor de Cristo. Únete a nuestra familia espiritual y descubre el propósito de Dios para ti." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:url" content="https://ministeriovidaeterna.org" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ministerio Vida Eterna" />
+    <meta property="og:locale" content="es_HN" />
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ministerio Vida Eterna - Campamento de Fe" />
+    <meta name="twitter:description" content="Transformamos vidas a través del amor de Cristo. Únete a nuestra familia espiritual." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/twitter-image.jpg" />
+    
+    <!-- Keywords para SEO -->
+    <meta name="keywords" content="iglesia, ministerio, cristiano, evangelio, Honduras, campamento, fe, vida eterna, comunidad cristiana, estudio bíblico, alabanza, adoración" />
+    
+    <!-- Autor y derechos -->
+    <meta name="author" content="Ministerio Vida Eterna" />
+    <meta name="copyright" content="Ministerio Vida Eterna" />
+    
+    <!-- Geo tags -->
+    <meta name="geo.region" content="HN" />
+    <meta name="geo.placename" content="Honduras" />
+    
+    <!-- Manifest para PWA -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    
+    <!-- Preconnect para fuentes externas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Título del sitio -->
+    <title>Ministerio Vida Eterna | Campamento de Fe en Honduras</title>
+    
+    <!-- Estilos críticos inline (opcional) -->
+    <style>
+      /* Preloader básico */
+      #root-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        color: white;
+        font-family: 'Inter', sans-serif;
+      }
+      
+      /* Asegurar que las imágenes no se desborden */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      /* Mejoras de accesibilidad */
+      :focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+      
+      /* Animación de carga */
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+      
+      .loading-spinner {
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+    </style>
+    
+    <!-- Analytics (reemplaza con tu ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Schema.org para SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ministerio Vida Eterna",
+      "alternateName": "Campamento Vida Eterna",
+      "url": "https://ministeriovidaeterna.org",
+      "logo": "%PUBLIC_URL%/logo.png",
+      "description": "Ministerio cristiano dedicado al crecimiento espiritual, evangelismo y servicio comunitario en Honduras.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "HN",
+        "addressLocality": "Honduras"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+504-XXXX-XXXX",
+        "contactType": "Customer Service"
+      },
+      "sameAs": [
+        "https://www.facebook.com/ministeriovidaeterna",
+        "https://www.instagram.com/ministeriovidaeterna"
+      ]
+    }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- Pantalla de carga mientras React se inicia -->
+    <div id="root-loading" style="display: none;">
+      <div class="loading-spinner" style="text-align: center;">
+        <div style="font-size: 2rem; margin-bottom: 1rem;">⛪</div>
+        <h2 style="font-weight: 600; margin-bottom: 0.5rem;">Ministerio Vida Eterna</h2>
+        <p style="opacity: 0.8;">Cargando bendiciones...</p>
+      </div>
+    </div>
+    
+    <!-- Contenedor principal de React -->
+    <noscript>
+      <div style="
+        text-align: center; 
+        padding: 2rem; 
+        background: #f8f9fa; 
+        color: #333; 
+        font-family: sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      ">
+        <h1 style="color: #1e40af; font-size: 2rem; margin-bottom: 1rem;">
+          ⛪ Ministerio Vida Eterna
+        </h1>
+        <p style="font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem;">
+          Para disfrutar de nuestra página web, necesitas habilitar JavaScript en tu navegador.
+        </p>
+        <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+          <h2 style="color: #1e40af; margin-bottom: 1rem;">Información de contacto</h2>
+          <p><strong>📍 Dirección:</strong> Calle de la Fe, Honduras</p>
+          <p><strong>📞 Teléfono:</strong> +504 XXXX-XXXX</p>
+          <p><strong>🕐 Horarios:</strong> Domingos 9:00 AM y 6:00 PM</p>
+          <p style="margin-top: 1.5rem; font-style: italic;">
+            "Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar."<br>
+            <strong>Mateo 11:28</strong>
+          </p>
+        </div>
+      </div>
+    </noscript>
+    
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    
+    <!-- Script para manejar la pantalla de carga -->
+    <script>
+      // Mostrar pantalla de carga mientras React se inicializa
+      document.getElementById('root-loading').style.display = 'flex';
+      
+      // Ocultar cuando React termine de cargar
+      window.addEventListener('DOMContentLoaded', (event) => {
+        // React normalmente oculta el div#root-loading automáticamente
+        // pero por si acaso, lo ocultamos después de un tiempo
+        setTimeout(() => {
+          const loadingDiv = document.getElementById('root-loading');
+          if (loadingDiv) {
+            loadingDiv.style.display = 'none';
+          }
+        }, 500);
+      });
+      
+      // Detectar si es un dispositivo móvil
+      window.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+      // Mejora de experiencia táctil para móviles
+      if (window.isMobile) {
+        document.body.classList.add('mobile-device');
+      }
+    </script>
+    
+    <!-- Scripts de PayPal (si los necesitas) -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD" async></script>
   </body>
 </html>
