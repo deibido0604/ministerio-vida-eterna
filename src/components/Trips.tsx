@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Users, Stethoscope, Book } from 'lucide-react';
+import { Calendar, Users } from 'lucide-react';
 
 const Trips: React.FC = () => {
   const trips = [
@@ -31,34 +31,6 @@ const Trips: React.FC = () => {
       icon: <Calendar className="h-6 w-6" />,
       color: 'bg-green-100 text-green-600'
     },
-    {
-      id: 3,
-      title: 'Viaje Médico/Dental de Septiembre',
-      date: 'Septiembre 4 - Septiembre 12, 2026',
-      description: 'Equipo médico y dental de alcance comunitario',
-      activities: [
-        'Equipo médico/dental completo',
-        'Trabajo con escuelas locales',
-        'Clínicas de salud gratuitas',
-        'Distribución de medicamentos'
-      ],
-      icon: <Stethoscope className="h-6 w-6" />,
-      color: 'bg-purple-100 text-purple-600'
-    },
-    {
-      id: 4,
-      title: 'Viaje de Octubre',
-      date: 'Octubre 16 - Octubre 24, 2026',
-      description: 'Último viaje del año con enfoque médico y educativo',
-      activities: [
-        'Equipo médico/dental',
-        'Trabajo con escuelas locales',
-        'Preparativos para la temporada navideña',
-        'Entrega de suministros escolares'
-      ],
-      icon: <Book className="h-6 w-6" />,
-      color: 'bg-orange-100 text-orange-600'
-    }
   ];
 
   return (

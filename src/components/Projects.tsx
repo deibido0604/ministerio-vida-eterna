@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Users, Building, Heart, Target, Church } from 'lucide-react';
+import { Home, Building, Heart, Target } from 'lucide-react';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -42,45 +42,6 @@ const Projects: React.FC = () => {
         'Programas de desarrollo'
       ]
     },
-    {
-      id: 4,
-      title: 'Nuevo Orfanato',
-      description: 'Buscamos expandir nuestro alcance abriendo nuevos hogares en diferentes ciudades de Honduras para atender a más niños y jóvenes en necesidad.',
-      icon: <Users className="h-8 w-8" />,
-      urgency: 'Expansión Necesaria',
-      color: 'bg-purple-50 text-purple-700',
-      benefits: [
-        'Más capacidad de atención',
-        'Ubicaciones estratégicas',
-        'Programas especializados'
-      ]
-    },
-    {
-      id: 5,
-      title: 'Proyecto Iglesia Villanueva',
-      description: 'Ampliación de nuestras instalaciones para incluir espacios dedicados a programas comunitarios, cuidado infantil y servicios de alimentación para la comunidad.',
-      icon: <Church className="h-8 w-8" />,
-      urgency: 'Desarrollo Comunitario',
-      color: 'bg-blue-50 text-blue-700',
-      benefits: [
-        'Espacio para programas sociales',
-        'Guardería comunitaria',
-        'Centro de ayuda alimentaria'
-      ]
-    },
-    {
-      id: 6,
-      title: 'Proyecto Iglesia Gerizem',
-      description: 'Planificación de nuevas instalaciones que servirán como centro de adoración y servicio comunitario, expandiendo nuestro impacto en la región.',
-      icon: <Target className="h-8 w-8" />,
-      urgency: 'Visión a Futuro',
-      color: 'bg-green-50 text-green-700',
-      benefits: [
-        'Nuevo centro de adoración',
-        'Expansión del ministerio',
-        'Mayor alcance comunitario'
-      ]
-    }
   ];
 
   return (
