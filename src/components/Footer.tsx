@@ -132,13 +132,13 @@ const Footer: React.FC = () => {
               © {currentYear} Ministerio Vida Eterna. Todos los derechos reservados.
             </p>
             <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="#3" className="text-gray-400 hover:text-blue-400 transition-colors">
                 Términos y condiciones
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="#2" className="text-gray-400 hover:text-blue-400 transition-colors">
                 Política de privacidad
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="#1" className="text-gray-400 hover:text-blue-400 transition-colors">
                 Aviso legal
               </a>
             </div>

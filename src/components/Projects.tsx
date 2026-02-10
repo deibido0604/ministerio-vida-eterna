@@ -83,29 +83,6 @@ const Projects: React.FC = () => {
     }
   ];
 
-  const churchProjects = [
-    {
-      name: 'El Rey Ya Viene - San Pedro Sula',
-      description: 'Mejoramos nuestras instalaciones para ofrecer mejores espacios de enseñanza y desarrollo espiritual para todas las edades.',
-      impact: 'Ampliación de capacidad educativa'
-    },
-    {
-      name: 'El Rey Ya Viene - Quimistán',
-      description: 'Establecimiento de una nueva congregación hermana con planes de crecimiento y servicio a la comunidad local.',
-      impact: 'Nueva comunidad de fe'
-    },
-    {
-      name: 'El Rey Ya Viene - Le Ceba',
-      description: 'Iniciativa para llevar el mensaje del Evangelio a una comunidad que actualmente carece de presencia cristiana organizada.',
-      impact: 'Evangelismo en nueva área'
-    },
-    {
-      name: 'Iglesias Zacapa',
-      description: 'Apoyo a múltiples congregaciones hermanas para mejorar sus espacios y fortalecer su ministerio local.',
-      impact: 'Fortalecimiento de iglesias locales'
-    }
-  ];
-
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto px-4">

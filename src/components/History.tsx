@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Calendar, Heart, Users, Church, Target } from 'lucide-react';
+import { BookOpen, Heart, Users, Church, Target } from 'lucide-react';
 
 const History: React.FC = () => {
   return (

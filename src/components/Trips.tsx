@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Users, Wrench, Stethoscope, Book } from 'lucide-react';
+import { Calendar, Users, Stethoscope, Book } from 'lucide-react';
 
 const Trips: React.FC = () => {
   const trips = [
