@@ -40,7 +40,7 @@ const Header: React.FC = () => {
               <h1 className="text-2xl font-bold text-gray-800">
                 Ministerio Vida Eterna
               </h1>
-              <p className="text-xs text-gray-500">Campamento de Fe</p>
+              <p className="text-xs text-gray-500">Campamento Vida Eterna</p>
             </div>
           </Link>
 

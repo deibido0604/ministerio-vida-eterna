@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
     {
         id: 2,
         image: "/images/hero/iglesia2.jpg",
-        title: "Campamento de Fe",
+        title: "Campamento Vida Eterna",
         description: "Vive una experiencia transformadora"
     },
     {

@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <h2 className="text-2xl font-bold">Ministerio Vida Eterna</h2>
-                <p className="text-gray-400 text-sm">Campamento de Fe</p>
+                <p className="text-gray-400 text-sm">Campamento Vida Eterna</p>
               </div>
             </div>
             <p className="text-gray-400 mb-6">
