@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero: React.FC = () => {
+    const { t } = useLanguage();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
     
@@ -9,20 +11,20 @@ const Hero: React.FC = () => {
     {
         id: 1,
         image: "/images/hero/iglesia1.jpg",
-        title: "Ministerio Vida Eterna",
-        description: "Un lugar de encuentro con Dios"
+        title: t('hero.slide1.title'),
+        description: t('hero.slide1.description')
     },
     {
         id: 2,
         image: "/images/hero/iglesia2.jpg",
-        title: "Campamento Vida Eterna",
-        description: "Vive una experiencia transformadora"
+        title: t('hero.slide2.title'),
+        description: t('hero.slide2.description')
     },
     {
         id: 3,
         image: "/images/hero/iglesia3.jpg",
-        title: "Comunidad de Amor",
-        description: "Creciendo juntos en Cristo"
+        title: t('hero.slide3.title'),
+        description: t('hero.slide3.description')
     },
 ];
 
@@ -124,12 +126,10 @@ const Hero: React.FC = () => {
                     <div className="text-center lg:text-left">
                         <div className="mb-6">
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                                Bienvenidos al <span className="text-blue-600">Ministerio Vida Eterna</span>
+                                {t('hero.welcome')} <span className="text-blue-600">{t('hero.title')}</span>
                             </h2>
                             <p className="text-gray-600 text-lg">
-                                Somos una comunidad de fe comprometida con el crecimiento espiritual, 
-                                el servicio a la comunidad y la proclamación del Evangelio. 
-                                Nuestro campamento es un lugar donde las vidas son transformadas.
+                                {t('hero.description')}
                             </p>
                         </div>
 
@@ -139,13 +139,13 @@ const Hero: React.FC = () => {
                                 onClick={() => scrollToSection('contact')}
                                 className="px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                             >
-                                Visítanos este Domingo
+                                {t('hero.visitUs')}
                             </button>
                             <button
                                 onClick={() => scrollToSection('donations')}
                                 className="px-6 py-3 border-2 border-blue-600 text-blue-600 font-medium rounded-md hover:bg-blue-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                             >
-                                Apoya la Obra
+                                {t('hero.support')}
                             </button>
                         </div>
 
@@ -157,8 +157,8 @@ const Hero: React.FC = () => {
                                         <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                                     </svg>
                                 </div>
-                                <h3 className="font-semibold text-gray-800 mb-1">Comunidad</h3>
-                                <p className="text-sm text-gray-600">Vivimos en unidad y amor fraternal</p>
+                                <h3 className="font-semibold text-gray-800 mb-1">{t('hero.community')}</h3>
+                                <p className="text-sm text-gray-600">{t('hero.communityDesc')}</p>
                             </div>
                             
                             <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
@@ -167,8 +167,8 @@ const Hero: React.FC = () => {
                                         <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
                                     </svg>
                                 </div>
-                                <h3 className="font-semibold text-gray-800 mb-1">Crecimiento</h3>
-                                <p className="text-sm text-gray-600">Discipulado y formación bíblica</p>
+                                <h3 className="font-semibold text-gray-800 mb-1">{t('hero.growth')}</h3>
+                                <p className="text-sm text-gray-600">{t('hero.growthDesc')}</p>
                             </div>
                             
                             <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
@@ -177,8 +177,8 @@ const Hero: React.FC = () => {
                                         <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
                                     </svg>
                                 </div>
-                                <h3 className="font-semibold text-gray-800 mb-1">Enseñanza</h3>
-                                <p className="text-sm text-gray-600">Palabra de Dios sólida y relevante</p>
+                                <h3 className="font-semibold text-gray-800 mb-1">{t('hero.teaching')}</h3>
+                                <p className="text-sm text-gray-600">{t('hero.teachingDesc')}</p>
                             </div>
                         </div>
                     </div>

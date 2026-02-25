@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageCircle } from 'lucide-react';
+import { useLanguage } from 'context/LanguageContext';
 
 const Contact: React.FC = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,8 +12,7 @@ const Contact: React.FC = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // Número de WhatsApp - Cambia esto por tu número real
-  const whatsappNumber = "50412345678"; // Sin el +, sin espacios
+  const whatsappNumber = "50412345678";
   const whatsappMessage = encodeURIComponent("Hola, me gustaría obtener más información sobre el Ministerio Vida Eterna");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -41,16 +42,13 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Contáctanos</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Estamos aquí para servirte. Ponte en contacto con nosotros para cualquier consulta, oración o para visitarnos.
-          </p>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">{t('contact.title')}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">{t('contact.subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Información de contacto */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Información de Contacto</h3>
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('contact.infoTitle')}</h3>
             
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
@@ -58,8 +56,8 @@ const Contact: React.FC = () => {
                   <MapPin className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-700 text-lg">Dirección</h4>
-                  <p className="text-gray-600">Calle de la Fe 123, Col. Esperanza<br />San Pedro Sula, Honduras</p>
+                  <h4 className="font-bold text-gray-700 text-lg">{t('contact.address')}</h4>
+                  <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: t('contact.addressValue') }} />
                 </div>
               </div>
 
@@ -68,18 +66,38 @@ const Contact: React.FC = () => {
                   <Phone className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-700 text-lg">Teléfonos</h4>
+                  <h4 className="font-bold text-gray-700 text-lg">{t('contact.phone')}</h4>
                   <p className="text-gray-600">
-                    <a href="tel:+50412345678" className="hover:text-blue-600 transition-colors">+504 1234-5678</a><br />
+                    <a href="tel:+50412345678" className="hover:text-blue-600 transition-colors">+504 1234-5678</a>
                   </p>
                 </div>
               </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="bg-green-100 p-3 rounded-full">
+                  <MessageCircle className="h-6 w-6 text-green-600" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-700 text-lg">{t('contact.whatsapp')}</h4>
+                  <p className="text-gray-600">
+                    <a 
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-green-600 transition-colors font-medium"
+                    >
+                      {t('contact.whatsappChat')}
+                    </a>
+                  </p>
+                </div>
+              </div>
+
               <div className="flex items-start space-x-4">
                 <div className="bg-blue-100 p-3 rounded-full">
                   <Mail className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-700 text-lg">Email</h4>
+                  <h4 className="font-bold text-gray-700 text-lg">{t('contact.email')}</h4>
                   <p className="text-gray-600">
                     <a href="mailto:info@ministeriovidaeterna.org" className="hover:text-blue-600 transition-colors">
                       info@ministeriovidaeterna.org
@@ -93,19 +111,18 @@ const Contact: React.FC = () => {
                   <Clock className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-700 text-lg">Horarios de Servicios</h4>
+                  <h4 className="font-bold text-gray-700 text-lg">{t('contact.schedule')}</h4>
                   <div className="text-gray-600">
-                    <p className="font-semibold">Domingos:</p>
-                    <p>Servicio de Adoración: 9:00 AM - 11:00 AM</p>
-                    <p>Escuela Dominical: 11:30 AM - 1:00 PM</p>
-                    <p className="font-semibold mt-2">Miércoles:</p>
-                    <p>Estudio Bíblico: 7:00 PM - 8:30 PM</p>
+                    <p className="font-semibold">{t('contact.sunday')}</p>
+                    <p>{t('contact.sundayMorning')}</p>
+                    <p>{t('contact.sundaySchool')}</p>
+                    <p className="font-semibold mt-2">{t('contact.wednesday')}</p>
+                    <p>{t('contact.wednesdayBible')}</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Botón grande de WhatsApp */}
             <div className="mt-8">
               <a
                 href={whatsappUrl}
@@ -114,29 +131,51 @@ const Contact: React.FC = () => {
                 className="inline-flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg"
               >
                 <MessageCircle className="h-6 w-6 mr-3" />
-                <span>Escríbenos por WhatsApp</span>
+                <span>{t('contact.whatsappChat')}</span>
               </a>
             </div>
 
+            <div className="mt-12">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">{t('contact.followUs')}</h4>
+              <div className="flex space-x-4">
+                <a href="https://facebook.com" className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition-colors">
+                  <span className="sr-only">Facebook</span>
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+                <a href="https://instagram.com" className="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition-colors">
+                  <span className="sr-only">Instagram</span>
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+                <a href="https://youtube.com" className="bg-red-600 text-white p-3 rounded-full hover:bg-red-700 transition-colors">
+                  <span className="sr-only">YouTube</span>
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
 
-          {/* Formulario de contacto */}
           <div>
             <div className="bg-gray-50 p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Envíanos un Mensaje</h3>
+              <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('contact.formTitle')}</h3>
               
               {isSubmitted ? (
                 <div className="text-center py-8">
                   <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                  <h4 className="text-2xl font-bold text-gray-800 mb-2">¡Mensaje Enviado!</h4>
-                  <p className="text-gray-600">Gracias por contactarnos. Te responderemos pronto.</p>
+                  <h4 className="text-2xl font-bold text-gray-800 mb-2">{t('contact.successTitle')}</h4>
+                  <p className="text-gray-600">{t('contact.successMessage')}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
                   <div className="space-y-6">
                     <div>
                       <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-                        Nombre Completo
+                        {t('contact.name')}
                       </label>
                       <input
                         type="text"
@@ -146,14 +185,14 @@ const Contact: React.FC = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-                        placeholder="Tu nombre"
+                        placeholder={t('contact.placeholderName')}
                       />
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                          Email
+                          {t('contact.emailLabel')}
                         </label>
                         <input
                           type="email"
@@ -163,13 +202,13 @@ const Contact: React.FC = () => {
                           onChange={handleChange}
                           required
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-                          placeholder="tu@email.com"
+                          placeholder={t('contact.placeholderEmail')}
                         />
                       </div>
 
                       <div>
                         <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
-                          Teléfono
+                          {t('contact.phoneLabel')}
                         </label>
                         <input
                           type="tel"
@@ -178,14 +217,14 @@ const Contact: React.FC = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-                          placeholder="+504 1234-5678"
+                          placeholder={t('contact.placeholderPhone')}
                         />
                       </div>
                     </div>
 
                     <div>
                       <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
-                        Mensaje
+                        {t('contact.messageLabel')}
                       </label>
                       <textarea
                         id="message"
@@ -195,7 +234,7 @@ const Contact: React.FC = () => {
                         required
                         rows={4}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-                        placeholder="¿En qué podemos ayudarte?"
+                        placeholder={t('contact.placeholderMessage')}
                       />
                     </div>
 
@@ -203,7 +242,7 @@ const Contact: React.FC = () => {
                       type="submit"
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
                     >
-                      <span>Enviar Mensaje</span>
+                      <span>{t('contact.send')}</span>
                       <Send className="h-5 w-5" />
                     </button>
                   </div>
@@ -214,13 +253,12 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      {/* Botón flotante de WhatsApp */}
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center animate-bounce"
-        aria-label="Chatear por WhatsApp"
+        aria-label="Chat by WhatsApp"
         style={{ animationDuration: '2s' }}
       >
         <MessageCircle className="h-8 w-8" />

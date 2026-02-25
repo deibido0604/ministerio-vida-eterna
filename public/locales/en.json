@@ -1,0 +1,265 @@
+{
+    "common": {
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success"
+    },
+    "header": {
+        "home": "Home",
+        "history": "History",
+        "trips": "2026 Trips",
+        "projects": "Projects",
+        "ministries": "Ministries",
+        "donations": "Donations",
+        "contact": "Contact",
+        "callUs": "Call us",
+        "mainPhone": "Main phone"
+    },
+    "hero": {
+        "title": "Eternal Life Ministry",
+        "welcome": "Welcome to",
+        "description": "We are a faith community committed to spiritual growth, community service, and proclaiming the Gospel. Our camp is a place where lives are transformed.",
+        "visitUs": "Visit Us This Sunday",
+        "support": "Support the Work",
+        "community": "Community",
+        "communityDesc": "We live in unity and brotherly love",
+        "growth": "Growth",
+        "growthDesc": "Discipleship and biblical training",
+        "teaching": "Teaching",
+        "teachingDesc": "Solid and relevant Word of God",
+        "slide1": {
+            "title": "Eternal Life Ministry",
+            "description": "A place to meet God"
+        },
+        "slide2": {
+            "title": "Eternal Life Camp",
+            "description": "Live a transformative experience"
+        },
+        "slide3": {
+            "title": "Community of Love",
+            "description": "Growing together in Christ"
+        }
+    },
+    "history": {
+        "title": "Our History",
+        "subtitle": "How this ministry began",
+        "paragraph1": "Eternal Life Ministry was born in 1995 as a small Bible study group in the home of our founders, Pastor Juan and María Pérez. What started with 10 people became a vibrant community.",
+        "paragraph2": "In 2000, God allowed us to acquire our first land where we built the first temple. Since then, we have grown to include multiple ministries, social aid programs, and missions.",
+        "paragraph3": "Today, our camp welcomes hundreds of people each year seeking a transformative encounter with God. We believe every life matters and together we can make a difference.",
+        "mission": "Mission",
+        "missionText": "To bring the love of Christ to every person, transforming lives through biblical teaching, discipleship, and community service.",
+        "vision": "Vision",
+        "visionText": "To be a faith community that impacts Honduras and the world with the Gospel, forming disciples and serving with love.",
+        "values": "Values",
+        "valuesList": "Love, Unity, Service, Faith, Hope"
+    },
+    "trips": {
+        "title": "Trips and Missions",
+        "subtitle": "Join our faith expeditions",
+        "upcoming": "Upcoming Trips",
+        "trip1": {
+            "title": "San Pedro Sula Mission",
+            "date": "July 15-22, 2024",
+            "description": "Community support, evangelism, and work with children in the most needy areas.",
+            "spots": "Available spots: 12"
+        },
+        "trip2": {
+            "title": "Youth Camp",
+            "date": "August 5-12, 2024",
+            "description": "A retreat for youth with recreational activities, Bible studies, and campfires.",
+            "spots": "Available spots: 25"
+        },
+        "trip3": {
+            "title": "International Mission",
+            "date": "September 10-24, 2024",
+            "description": "Trip to Guatemala to support sister churches and construction projects.",
+            "spots": "Available spots: 8"
+        },
+        "cta": "Sign Up",
+        "moreInfo": "More info"
+    },
+    "projects": {
+        "title": "Transformation Projects",
+        "subtitle": "Our projects seek to transform lives and communities through Christian love and service",
+        "initiatives": "Main Initiatives",
+        "project1": {
+            "title": "Santiago Mission House",
+            "description": "We support the acquisition of a mission house that serves as a home for our resident missionary in San Pedro Sula, facilitating his evangelistic work and community service.",
+            "urgency": "Current Need",
+            "benefits": [
+                "Base for missionary work",
+                "Volunteer lodging",
+                "Aid distribution center"
+            ]
+        },
+        "project2": {
+            "title": "Yolany's Home",
+            "description": "We regularly support a home that currently provides care and education for children in vulnerable situations, ensuring their basic needs and integral development.",
+            "urgency": "Ongoing Support",
+            "benefits": [
+                "Daily meals",
+                "Education and care",
+                "Basic medical attention"
+            ]
+        },
+        "project3": {
+            "title": "GN Children's Home",
+            "description": "We are working to establish a new home that can shelter and provide a family environment for children in need of a safe place to grow and develop.",
+            "urgency": "Ongoing Project",
+            "benefits": [
+                "Adequate space for children",
+                "Family environment",
+                "Development programs"
+            ]
+        },
+        "project4": {
+            "title": "New Orphanage",
+            "description": "We seek to expand our reach by opening new homes in different cities of Honduras to serve more children and youth in need.",
+            "urgency": "Necessary Expansion",
+            "benefits": [
+                "More capacity",
+                "Strategic locations",
+                "Specialized programs"
+            ]
+        },
+        "project5": {
+            "title": "Villanueva Church Project",
+            "description": "Expansion of our facilities to include spaces dedicated to community programs, childcare, and food services for the community.",
+            "urgency": "Community Development",
+            "benefits": [
+                "Space for social programs",
+                "Community daycare",
+                "Food aid center"
+            ]
+        },
+        "project6": {
+            "title": "Gerizem Church Project",
+            "description": "Planning new facilities that will serve as a worship and community service center, expanding our impact in the region.",
+            "urgency": "Future Vision",
+            "benefits": [
+                "New worship center",
+                "Ministry expansion",
+                "Greater community reach"
+            ]
+        },
+        "churchProjects": {
+            "title": "Church Development",
+            "project1": {
+                "name": "El Rey Ya Viene - San Pedro Sula",
+                "description": "We are improving our facilities to offer better spaces for teaching and spiritual development for all ages.",
+                "impact": "Educational capacity expansion"
+            },
+            "project2": {
+                "name": "El Rey Ya Viene - Quimistán",
+                "description": "Establishment of a new sister congregation with plans for growth and service to the local community.",
+                "impact": "New faith community"
+            },
+            "project3": {
+                "name": "El Rey Ya Viene - Le Ceba",
+                "description": "Initiative to bring the Gospel message to a community that currently lacks organized Christian presence.",
+                "impact": "Evangelism in new area"
+            },
+            "project4": {
+                "name": "Zacapa Churches",
+                "description": "Support for multiple sister congregations to improve their spaces and strengthen their local ministry.",
+                "impact": "Strengthening local churches"
+            }
+        },
+        "cta": "I Want to Be Part",
+        "moreInfo": "Learn more about this initiative →"
+    },
+    "ministries": {
+        "title": "Our Ministries",
+        "subtitle": "Each ministry is designed to serve and build up the body of Christ. There is a place for you!",
+        "ministry1": {
+            "title": "Praise and Worship",
+            "description": "Music ministry that leads the congregation in worship to God."
+        },
+        "ministry2": {
+            "title": "Home Groups",
+            "description": "Weekly meetings in homes for Bible study and fellowship."
+        },
+        "ministry3": {
+            "title": "Sunday School",
+            "description": "Bible teaching for children, youth, and adults."
+        },
+        "ministry4": {
+            "title": "Social Service",
+            "description": "Community help through food programs and support."
+        },
+        "ministry5": {
+            "title": "Missions",
+            "description": "Support for missionaries and evangelism projects."
+        },
+        "ministry6": {
+            "title": "Youth",
+            "description": "Specialized ministry for youth and teenagers."
+        },
+        "learnMore": "Learn more →"
+    },
+    "donations": {
+        "title": "Support Our Mission",
+        "subtitle": "Your generosity allows us to continue our work of evangelization, community help, and discipleship. Every donation makes a difference.",
+        "whyDonate": "Why donate?",
+        "reason1": {
+            "title": "Mission and Evangelism",
+            "description": "Support our community outreach efforts"
+        },
+        "reason2": {
+            "title": "Social Help",
+            "description": "Food programs and family support"
+        },
+        "otherMethods": "Other ways to donate",
+        "bankTransfer": "Bank Transfer",
+        "bankDetails": "Bank: Your Local Bank<br/>Account: 123-456789-0",
+        "inPerson": "In Person",
+        "inPersonDesc": "Sundays during our services",
+        "onlineDonation": "Donate Online",
+        "selectAmount": "Select a donation amount:",
+        "customAmount": "Or enter a custom amount:",
+        "secureNote": "Your donation is secure and protected by PayPal"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "We are here to serve you. Get in touch with us for any questions, prayer requests, or to visit us.",
+        "infoTitle": "Contact Information",
+        "address": "Address",
+        "addressValue": "Faith Street 123, Hope Neighborhood<br />San Pedro Sula, Honduras",
+        "phone": "Phone",
+        "whatsapp": "WhatsApp",
+        "whatsappChat": "Chat with us",
+        "email": "Email",
+        "schedule": "Service Times",
+        "sunday": "Sundays:",
+        "sundayMorning": "Worship Service: 9:00 AM - 11:00 AM",
+        "sundaySchool": "Sunday School: 11:30 AM - 1:00 PM",
+        "wednesday": "Wednesdays:",
+        "wednesdayBible": "Bible Study: 7:00 PM - 8:30 PM",
+        "followUs": "Follow Us on Social Media",
+        "formTitle": "Send Us a Message",
+        "name": "Full Name",
+        "emailLabel": "Email",
+        "phoneLabel": "Phone",
+        "messageLabel": "Message",
+        "send": "Send Message",
+        "successTitle": "Message Sent!",
+        "successMessage": "Thank you for contacting us. We'll reply soon.",
+        "placeholderName": "Your name",
+        "placeholderEmail": "you@email.com",
+        "placeholderPhone": "+504 1234-5678",
+        "placeholderMessage": "How can we help you?"
+    },
+    "footer": {
+        "companyName": "Eternal Life Ministry",
+        "tagline": "Faith Camp",
+        "description": "We transform lives through the love of Christ. Join our spiritual family and discover God's purpose for you.",
+        "quickLinks": "Quick Links",
+        "contactInfo": "Contact Information",
+        "address": "Faith Street 123, San Pedro Sula, Honduras",
+        "phone": "+504 1234-5678",
+        "email": "info@ministeriovidaeterna.org",
+        "copyright": "All rights reserved.",
+        "madeWith": "Made with",
+        "for": "for the glory of God"
+    }
+}

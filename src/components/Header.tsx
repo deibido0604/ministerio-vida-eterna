@@ -1,23 +1,29 @@
 import React, { useState } from "react";
-import { Menu, X, Phone, MapPin, Church, ChevronRight } from "lucide-react";
+import { Menu, X, Phone, MapPin, Church, ChevronRight, Globe } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { language, setLanguage, t } = useLanguage();
 
   const menuItems = [
-    { label: "Inicio", href: "/" },
-    { label: "Historia", href: "/#history" },
-    { label: "Viajes 2026", href: "/#trips" },
-    { label: "Proyectos", href: "/#projects" },
-    { label: "Ministerios", href: "/#ministries" },
-    { label: "Donaciones", href: "/#donations" },
-    { label: "Contacto", href: "/#contact" },
+    { label: t('header.home'), href: "/" },
+    { label: t('header.history'), href: "/#history" },
+    { label: t('header.trips'), href: "/#trips" },
+    { label: t('header.projects'), href: "/#projects" },
+    { label: t('header.ministries'), href: "/#ministries" },
+    { label: t('header.donations'), href: "/#donations" },
+    { label: t('header.contact'), href: "/#contact" },
   ];
 
   const closeMobileMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'es' ? 'en' : 'es');
   };
 
   return (
@@ -38,9 +44,9 @@ const Header: React.FC = () => {
 
             <div className="hidden sm:block">
               <h1 className="text-2xl font-bold text-gray-800">
-                Ministerio Vida Eterna
+                {t('footer.companyName')}
               </h1>
-              <p className="text-xs text-gray-500">Campamento Vida Eterna</p>
+              <p className="text-xs text-gray-500">{t('footer.tagline')}</p>
             </div>
           </Link>
 
@@ -64,8 +70,20 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* Contact Info */}
+          {/* Contact Info & Language Switcher */}
           <div className="hidden lg:flex items-center space-x-6">
+            {/* Botón de idioma */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors group"
+              aria-label={t('header.language')}
+            >
+              <Globe className="h-5 w-5 text-gray-600 group-hover:text-blue-600" />
+              <span className="font-medium text-gray-700 group-hover:text-blue-600 uppercase">
+                {language === 'es' ? 'ES' : 'EN'}
+              </span>
+            </button>
+
             <a
               href="tel:+50412345678"
               className="flex items-center space-x-2 group"
@@ -74,7 +92,7 @@ const Header: React.FC = () => {
                 <Phone className="h-5 w-5 text-blue-600" />
               </div>
               <div className="text-left">
-                <span className="text-sm text-gray-500">Llámanos</span>
+                <span className="text-sm text-gray-500">{t('contact.phone')}</span>
                 <p className="font-medium text-gray-700">+504 1234-5678</p>
               </div>
             </a>
@@ -114,11 +132,26 @@ const Header: React.FC = () => {
                     <ChevronRight className="h-4 w-4" />
                   </a>
                 ))}
+
+                {/* Botón de idioma en móvil */}
+                <button
+                  onClick={() => {
+                    toggleLanguage();
+                    closeMobileMenu();
+                  }}
+                  className="flex items-center justify-between px-4 py-3 rounded-lg hover:bg-gray-100 text-gray-700"
+                >
+                  <span className="font-medium">{t('header.language')}</span>
+                  <div className="flex items-center space-x-2">
+                    <Globe className="h-4 w-4" />
+                    <span className="uppercase font-bold">{language === 'es' ? 'ES' : 'EN'}</span>
+                  </div>
+                </button>
               </div>
 
               <div className="mt-6 pt-6 border-t border-gray-200 space-y-4">
                 <a
-                  href="tel:+50432148918"
+                  href="tel:+50412345678"
                   className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm hover:shadow transition-shadow"
                   onClick={closeMobileMenu}
                 >
@@ -127,7 +160,7 @@ const Header: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-medium text-gray-700">+504 12345678</p>
-                    <p className="text-sm text-gray-500">Teléfono principal</p>
+                    <p className="text-sm text-gray-500">{t('contact.phone')}</p>
                   </div>
                 </a>
                 

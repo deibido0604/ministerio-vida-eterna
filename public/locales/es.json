@@ -1,0 +1,265 @@
+{
+    "common": {
+        "loading": "Cargando...",
+        "error": "Error",
+        "success": "Éxito"
+    },
+    "header": {
+        "home": "Inicio",
+        "history": "Historia",
+        "trips": "Viajes 2026",
+        "projects": "Proyectos",
+        "ministries": "Ministerios",
+        "donations": "Donaciones",
+        "contact": "Contacto",
+        "callUs": "Llámanos",
+        "mainPhone": "Teléfono principal"
+    },
+    "hero": {
+        "title": "Ministerio Vida Eterna",
+        "welcome": "Bienvenidos al",
+        "description": "Somos una comunidad de fe comprometida con el crecimiento espiritual, el servicio a la comunidad y la proclamación del Evangelio. Nuestro campamento es un lugar donde las vidas son transformadas.",
+        "visitUs": "Visítanos este Domingo",
+        "support": "Apoya la Obra",
+        "community": "Comunidad",
+        "communityDesc": "Vivimos en unidad y amor fraternal",
+        "growth": "Crecimiento",
+        "growthDesc": "Discipulado y formación bíblica",
+        "teaching": "Enseñanza",
+        "teachingDesc": "Palabra de Dios sólida y relevante",
+        "slide1": {
+            "title": "Ministerio Vida Eterna",
+            "description": "Un lugar de encuentro con Dios"
+        },
+        "slide2": {
+            "title": "Campamento Vida Eterna",
+            "description": "Vive una experiencia transformadora"
+        },
+        "slide3": {
+            "title": "Comunidad de Amor",
+            "description": "Creciendo juntos en Cristo"
+        }
+    },
+    "history": {
+        "title": "Nuestra Historia",
+        "subtitle": "Cómo comenzó este ministerio",
+        "paragraph1": "El Ministerio Vida Eterna nació en 1995 como un pequeño grupo de estudio bíblico en el hogar de nuestros fundadores, el Pastor Juan y María Pérez. Lo que comenzó con 10 personas se convirtió en una comunidad vibrante.",
+        "paragraph2": "En el año 2000, Dios nos permitió adquirir nuestro primer terreno donde construimos el primer templo. Desde entonces, hemos crecido para incluir múltiples ministerios, programas de ayuda social y misiones.",
+        "paragraph3": "Hoy, nuestro campamento recibe a cientos de personas cada año que buscan un encuentro transformador con Dios. Creemos que cada vida es importante y que juntos podemos hacer la diferencia.",
+        "mission": "Misión",
+        "missionText": "Llevar el amor de Cristo a cada persona, transformando vidas a través de la enseñanza bíblica, el discipulado y el servicio comunitario.",
+        "vision": "Visión",
+        "visionText": "Ser una comunidad de fe que impacte a Honduras y el mundo con el Evangelio, formando discípulos y sirviendo con amor.",
+        "values": "Valores",
+        "valuesList": "Amor, Unidad, Servicio, Fe, Esperanza"
+    },
+    "trips": {
+        "title": "Viajes y Misiones",
+        "subtitle": "Únete a nuestras expediciones de fe",
+        "upcoming": "Próximos Viajes",
+        "trip1": {
+            "title": "Misión San Pedro Sula",
+            "date": "15-22 Julio 2024",
+            "description": "Apoyo comunitario, evangelismo y trabajo con niños en las zonas más necesitadas.",
+            "spots": "Cupos disponibles: 12"
+        },
+        "trip2": {
+            "title": "Campamento Juvenil",
+            "date": "5-12 Agosto 2024",
+            "description": "Un retiro para jóvenes con actividades recreativas, estudios bíblicos y fogatas.",
+            "spots": "Cupos disponibles: 25"
+        },
+        "trip3": {
+            "title": "Misión Internacional",
+            "date": "10-24 Septiembre 2024",
+            "description": "Viaje a Guatemala para apoyar iglesias hermanas y proyectos de construcción.",
+            "spots": "Cupos disponibles: 8"
+        },
+        "cta": "Inscríbete",
+        "moreInfo": "Más información"
+    },
+    "projects": {
+        "title": "Proyectos de Transformación",
+        "subtitle": "Nuestros proyectos buscan transformar vidas y comunidades a través del amor y servicio cristiano",
+        "initiatives": "Iniciativas Principales",
+        "project1": {
+            "title": "Casa Misión Santiago",
+            "description": "Apoyamos la adquisición de una casa misión que sirve como hogar para nuestro misionero residente en San Pedro Sula, facilitando su trabajo evangelístico y de servicio comunitario.",
+            "urgency": "Necesidad Actual",
+            "benefits": [
+                "Base para trabajo misionero",
+                "Hospedaje para voluntarios",
+                "Centro de distribución de ayuda"
+            ]
+        },
+        "project2": {
+            "title": "Casa de Yolany",
+            "description": "Apoyamos regularmente un hogar que actualmente brinda cuidado y educación a niños en situación vulnerable, asegurando sus necesidades básicas y desarrollo integral.",
+            "urgency": "Apoyo Continuo",
+            "benefits": [
+                "Alimentación diaria",
+                "Educación y cuidado",
+                "Atención médica básica"
+            ]
+        },
+        "project3": {
+            "title": "Hogar Infantil GN",
+            "description": "Trabajamos para establecer un nuevo hogar que pueda albergar y proveer un ambiente familiar a niños que necesitan un lugar seguro para crecer y desarrollarse.",
+            "urgency": "Proyecto en Marcha",
+            "benefits": [
+                "Espacio adecuado para niños",
+                "Ambiente familiar",
+                "Programas de desarrollo"
+            ]
+        },
+        "project4": {
+            "title": "Nuevo Orfanato",
+            "description": "Buscamos expandir nuestro alcance abriendo nuevos hogares en diferentes ciudades de Honduras para atender a más niños y jóvenes en necesidad.",
+            "urgency": "Expansión Necesaria",
+            "benefits": [
+                "Más capacidad de atención",
+                "Ubicaciones estratégicas",
+                "Programas especializados"
+            ]
+        },
+        "project5": {
+            "title": "Proyecto Iglesia Villanueva",
+            "description": "Ampliación de nuestras instalaciones para incluir espacios dedicados a programas comunitarios, cuidado infantil y servicios de alimentación para la comunidad.",
+            "urgency": "Desarrollo Comunitario",
+            "benefits": [
+                "Espacio para programas sociales",
+                "Guardería comunitaria",
+                "Centro de ayuda alimentaria"
+            ]
+        },
+        "project6": {
+            "title": "Proyecto Iglesia Gerizem",
+            "description": "Planificación de nuevas instalaciones que servirán como centro de adoración y servicio comunitario, expandiendo nuestro impacto en la región.",
+            "urgency": "Visión a Futuro",
+            "benefits": [
+                "Nuevo centro de adoración",
+                "Expansión del ministerio",
+                "Mayor alcance comunitario"
+            ]
+        },
+        "churchProjects": {
+            "title": "Desarrollo de Iglesias",
+            "project1": {
+                "name": "El Rey Ya Viene - San Pedro Sula",
+                "description": "Mejoramos nuestras instalaciones para ofrecer mejores espacios de enseñanza y desarrollo espiritual para todas las edades.",
+                "impact": "Ampliación de capacidad educativa"
+            },
+            "project2": {
+                "name": "El Rey Ya Viene - Quimistán",
+                "description": "Establecimiento de una nueva congregación hermana con planes de crecimiento y servicio a la comunidad local.",
+                "impact": "Nueva comunidad de fe"
+            },
+            "project3": {
+                "name": "El Rey Ya Viene - Le Ceba",
+                "description": "Iniciativa para llevar el mensaje del Evangelio a una comunidad que actualmente carece de presencia cristiana organizada.",
+                "impact": "Evangelismo en nueva área"
+            },
+            "project4": {
+                "name": "Iglesias Zacapa",
+                "description": "Apoyo a múltiples congregaciones hermanas para mejorar sus espacios y fortalecer su ministerio local.",
+                "impact": "Fortalecimiento de iglesias locales"
+            }
+        },
+        "cta": "Quiero Ser Parte",
+        "moreInfo": "Conocer más sobre esta iniciativa →"
+    },
+    "ministries": {
+        "title": "Nuestros Ministerios",
+        "subtitle": "Cada ministerio está diseñado para servir y edificar el cuerpo de Cristo. ¡Hay un lugar para ti!",
+        "ministry1": {
+            "title": "Alabanza y Adoración",
+            "description": "Ministerio de música que dirige la congregación en adoración a Dios."
+        },
+        "ministry2": {
+            "title": "Grupos de Hogar",
+            "description": "Reuniones semanales en casas para estudio bíblico y compañerismo."
+        },
+        "ministry3": {
+            "title": "Escuela Dominical",
+            "description": "Enseñanza bíblica para niños, jóvenes y adultos."
+        },
+        "ministry4": {
+            "title": "Servicio Social",
+            "description": "Ayuda a la comunidad a través de programas de alimentación y apoyo."
+        },
+        "ministry5": {
+            "title": "Misiones",
+            "description": "Apoyo a misioneros y proyectos de evangelismo."
+        },
+        "ministry6": {
+            "title": "Juventud",
+            "description": "Ministerio especializado para jóvenes y adolescentes."
+        },
+        "learnMore": "Saber más →"
+    },
+    "donations": {
+        "title": "Apoya Nuestra Misión",
+        "subtitle": "Tu generosidad nos permite continuar con nuestra labor de evangelización, ayuda comunitaria y discipulado. Cada donación hace la diferencia.",
+        "whyDonate": "¿Por qué donar?",
+        "reason1": {
+            "title": "Misión y Evangelismo",
+            "description": "Apoya nuestros esfuerzos de alcance comunitario"
+        },
+        "reason2": {
+            "title": "Ayuda Social",
+            "description": "Programas de alimentación y apoyo a familias"
+        },
+        "otherMethods": "Otras formas de donar",
+        "bankTransfer": "Transferencia Bancaria",
+        "bankDetails": "Banco: Tu Banco Local<br/>Cuenta: 123-456789-0",
+        "inPerson": "En Persona",
+        "inPersonDesc": "Domingos durante nuestros servicios",
+        "onlineDonation": "Donar en Línea",
+        "selectAmount": "Selecciona un monto de donación:",
+        "customAmount": "O ingresa un monto personalizado:",
+        "secureNote": "Tu donación es segura y protegida por PayPal"
+    },
+    "contact": {
+        "title": "Contáctanos",
+        "subtitle": "Estamos aquí para servirte. Ponte en contacto con nosotros para cualquier consulta, oración o para visitarnos.",
+        "infoTitle": "Información de Contacto",
+        "address": "Dirección",
+        "addressValue": "Calle de la Fe 123, Col. Esperanza<br />San Pedro Sula, Honduras",
+        "phone": "Teléfonos",
+        "whatsapp": "WhatsApp",
+        "whatsappChat": "Chatea con nosotros",
+        "email": "Email",
+        "schedule": "Horarios de Servicios",
+        "sunday": "Domingos:",
+        "sundayMorning": "Servicio de Adoración: 9:00 AM - 11:00 AM",
+        "sundaySchool": "Escuela Dominical: 11:30 AM - 1:00 PM",
+        "wednesday": "Miércoles:",
+        "wednesdayBible": "Estudio Bíblico: 7:00 PM - 8:30 PM",
+        "followUs": "Síguenos en Redes Sociales",
+        "formTitle": "Envíanos un Mensaje",
+        "name": "Nombre Completo",
+        "emailLabel": "Email",
+        "phoneLabel": "Teléfono",
+        "messageLabel": "Mensaje",
+        "send": "Enviar Mensaje",
+        "successTitle": "¡Mensaje Enviado!",
+        "successMessage": "Gracias por contactarnos. Te responderemos pronto.",
+        "placeholderName": "Tu nombre",
+        "placeholderEmail": "tu@email.com",
+        "placeholderPhone": "+504 1234-5678",
+        "placeholderMessage": "¿En qué podemos ayudarte?"
+    },
+    "footer": {
+        "companyName": "Ministerio Vida Eterna",
+        "tagline": "Campamento de Fe",
+        "description": "Transformamos vidas a través del amor de Cristo. Únete a nuestra familia espiritual y descubre el propósito de Dios para ti.",
+        "quickLinks": "Enlaces rápidos",
+        "contactInfo": "Información de contacto",
+        "address": "Calle de la Fe 123, San Pedro Sula, Honduras",
+        "phone": "+504 1234-5678",
+        "email": "info@ministeriovidaeterna.org",
+        "copyright": "Todos los derechos reservados.",
+        "madeWith": "Hecho con",
+        "for": "para la gloria de Dios"
+    }
+}
