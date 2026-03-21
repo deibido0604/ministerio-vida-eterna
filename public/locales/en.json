@@ -7,11 +7,13 @@
     "header": {
         "home": "Home",
         "history": "History",
-        "trips": "2026 Trips",
+        "trips": "Activities",
+        "media": "Media",
         "projects": "Projects",
         "ministries": "Ministries",
         "donations": "Donations",
         "contact": "Contact",
+        "language": "Language",
         "callUs": "Call us",
         "mainPhone": "Main phone"
     },
@@ -42,10 +44,10 @@
     },
     "history": {
         "title": "Our History",
-        "subtitle": "How this ministry began",
-        "paragraph1": "Eternal Life Ministry was born in 1995 as a small Bible study group in the home of our founders, Pastor Juan and María Pérez. What started with 10 people became a vibrant community.",
-        "paragraph2": "In 2000, God allowed us to acquire our first land where we built the first temple. Since then, we have grown to include multiple ministries, social aid programs, and missions.",
-        "paragraph3": "Today, our camp welcomes hundreds of people each year seeking a transformative encounter with God. We believe every life matters and together we can make a difference.",
+        "subtitle": "Our ongoing journey as a Christian community in Honduras",
+        "paragraph1": "Eternal Life Ministry grew as a community of prayer, worship, and biblical teaching, consistently serving families in San Pedro Sula and surrounding areas.",
+        "paragraph2": "Over time, the ministry strengthened its work through life houses, congregational worship services, community outreach brigades, missions, and spiritual formation for children, youth, and adults.",
+        "paragraph3": "Today we remain focused on discipleship, service, and Gospel proclamation through practical action: pastoral care, social support, and projects for local church growth.",
         "mission": "Mission",
         "missionText": "To bring the love of Christ to every person, transforming lives through biblical teaching, discipleship, and community service.",
         "vision": "Vision",
@@ -54,115 +56,145 @@
         "valuesList": "Love, Unity, Service, Faith, Hope"
     },
     "trips": {
-        "title": "Trips and Missions",
-        "subtitle": "Join our faith expeditions",
-        "upcoming": "Upcoming Trips",
-        "trip1": {
-            "title": "San Pedro Sula Mission",
-            "date": "July 15-22, 2024",
-            "description": "Community support, evangelism, and work with children in the most needy areas.",
-            "spots": "Available spots: 12"
-        },
-        "trip2": {
-            "title": "Youth Camp",
-            "date": "August 5-12, 2024",
-            "description": "A retreat for youth with recreational activities, Bible studies, and campfires.",
-            "spots": "Available spots: 25"
-        },
-        "trip3": {
-            "title": "International Mission",
-            "date": "September 10-24, 2024",
-            "description": "Trip to Guatemala to support sister churches and construction projects.",
-            "spots": "Available spots: 8"
-        },
-        "cta": "Sign Up",
-        "moreInfo": "More info"
+        "title": "Current Ministry Activities",
+        "subtitle": "These are the real ministries we are currently carrying out in our community.",
+        "cards": {
+            "templo": {
+                "title": "Temple Construction",
+                "frequency": "Active project",
+                "description": "Structural progress, roofing, and facility improvements for the congregation.",
+                "detail": "Ongoing work with support from church members and volunteers."
+            },
+            "culto": {
+                "title": "Church Worship Services",
+                "frequency": "Weekly",
+                "description": "Worship gatherings, teaching, and prayer as a faith community.",
+                "detail": "Children, youth, and adults actively participate in each service."
+            },
+            "casas": {
+                "title": "Life Houses",
+                "frequency": "Wednesdays",
+                "description": "We visit members' homes to share Bible topics and invite neighbors to hear the Word.",
+                "detail": "Home evangelism and family spiritual growth."
+            },
+            "brigada": {
+                "title": "Community Medical Brigades",
+                "frequency": "Special campaigns",
+                "description": "Community medical outreach in partnership with local NGOs.",
+                "detail": "Preventive care, guidance, and social support for families."
+            },
+            "ensayos": {
+                "title": "Biblical Training Sessions",
+                "frequency": "Ongoing formation",
+                "description": "Practice and training spaces with biblical content for service teams.",
+                "detail": "Preparation for ministry participation and growth in Scripture."
+            },
+            "misiones": {
+                "title": "Community Missions",
+                "frequency": "Mission outreach",
+                "description": "Visits to nursing homes, Villas del Cerro, and biblical values classes in schools.",
+                "detail": "We bring care, teaching, and hope in every mission visit."
+            },
+            "fogatas": {
+                "title": "Campfires, Pinatas, and Dances",
+                "frequency": "Family events",
+                "description": "Family-focused gatherings with activities, decorations, and healthy fellowship.",
+                "detail": "Celebrations that build unity and joy in Christ."
+            },
+            "entrega": {
+                "title": "Clothes and Food Supply Delivery",
+                "frequency": "Relief action",
+                "description": "Distribution of clothing and essential food supplies to families in need.",
+                "detail": "Donations are directed to priority communities."
+            }
+        }
     },
     "projects": {
         "title": "Transformation Projects",
-        "subtitle": "Our projects seek to transform lives and communities through Christian love and service",
+        "subtitle": "These workstreams reflect the ministry's current service in the community.",
         "initiatives": "Main Initiatives",
+        "impactTitle": "Project impact:",
         "project1": {
-            "title": "Santiago Mission House",
-            "description": "We support the acquisition of a mission house that serves as a home for our resident missionary in San Pedro Sula, facilitating his evangelistic work and community service.",
-            "urgency": "Current Need",
+            "title": "Congregational Services Consolidation",
+            "description": "Strengthen worship, teaching, and prayer services for children, youth, and adults throughout the week.",
+            "urgency": "Current priority",
             "benefits": [
-                "Base for missionary work",
-                "Volunteer lodging",
-                "Aid distribution center"
+                "Higher family participation",
+                "Continuous discipleship",
+                "Consistent pastoral coverage"
             ]
         },
         "project2": {
-            "title": "Yolany's Home",
-            "description": "We regularly support a home that currently provides care and education for children in vulnerable situations, ensuring their basic needs and integral development.",
-            "urgency": "Ongoing Support",
+            "title": "Life Houses Strengthening",
+            "description": "Expand and support home groups for evangelism, Bible teaching, and prayer in nearby neighborhoods.",
+            "urgency": "Continuous execution",
             "benefits": [
-                "Daily meals",
-                "Education and care",
-                "Basic medical attention"
+                "Neighborhood outreach",
+                "Family-level spiritual care",
+                "Integration of new believers"
             ]
         },
         "project3": {
-            "title": "GN Children's Home",
-            "description": "We are working to establish a new home that can shelter and provide a family environment for children in need of a safe place to grow and develop.",
-            "urgency": "Ongoing Project",
+            "title": "Temple Construction and Improvements",
+            "description": "Infrastructure progress to host worship services, discipleship, and community gatherings in better conditions.",
+            "urgency": "Work in progress",
             "benefits": [
-                "Adequate space for children",
-                "Family environment",
-                "Development programs"
+                "Safer facilities",
+                "More room for congregation",
+                "Better support for kids and youth"
             ]
         },
         "project4": {
-            "title": "New Orphanage",
-            "description": "We seek to expand our reach by opening new homes in different cities of Honduras to serve more children and youth in need.",
-            "urgency": "Necessary Expansion",
+            "title": "Brigades and Community Service",
+            "description": "Support and guidance campaigns for families, together with solidarity actions coordinated by volunteers.",
+            "urgency": "Expanding coverage",
             "benefits": [
-                "More capacity",
-                "Strategic locations",
-                "Specialized programs"
+                "Immediate needs support",
+                "Direct community connection",
+                "Christian witness in action"
             ]
         },
         "project5": {
-            "title": "Villanueva Church Project",
-            "description": "Expansion of our facilities to include spaces dedicated to community programs, childcare, and food services for the community.",
-            "urgency": "Community Development",
+            "title": "Missions and Community Outreach",
+            "description": "Mission visits to communities, homes, and schools to share the Gospel and biblical values.",
+            "urgency": "Relief response",
             "benefits": [
-                "Space for social programs",
-                "Community daycare",
-                "Food aid center"
+                "Practical evangelism",
+                "Spiritual accompaniment",
+                "Values-based formation"
             ]
         },
         "project6": {
-            "title": "Gerizem Church Project",
-            "description": "Planning new facilities that will serve as a worship and community service center, expanding our impact in the region.",
-            "urgency": "Future Vision",
+            "title": "Solidarity Delivery and Fellowship",
+            "description": "Distribution of clothes and food supplies along with campfires and family activities that strengthen unity and hope.",
+            "urgency": "Active calendar",
             "benefits": [
-                "New worship center",
-                "Ministry expansion",
-                "Greater community reach"
+                "Relief for vulnerable families",
+                "Children and youth integration",
+                "Stronger community unity"
             ]
         },
         "churchProjects": {
-            "title": "Church Development",
+            "title": "Active Ministry Fronts",
             "project1": {
-                "name": "El Rey Ya Viene - San Pedro Sula",
-                "description": "We are improving our facilities to offer better spaces for teaching and spiritual development for all ages.",
-                "impact": "Educational capacity expansion"
+                "name": "Congregational Worship Services",
+                "description": "Strengthening worship, teaching, and prayer gatherings with a family-centered approach.",
+                "impact": "Spiritual consolidation"
             },
             "project2": {
-                "name": "El Rey Ya Viene - Quimistán",
-                "description": "Establishment of a new sister congregation with plans for growth and service to the local community.",
-                "impact": "New faith community"
+                "name": "Biblical Formation",
+                "description": "Bible school, rehearsals, and service-team training to strengthen doctrine and practice.",
+                "impact": "Growth in the Word"
             },
             "project3": {
-                "name": "El Rey Ya Viene - Le Ceba",
-                "description": "Initiative to bring the Gospel message to a community that currently lacks organized Christian presence.",
-                "impact": "Evangelism in new area"
+                "name": "Community Support",
+                "description": "Brigades and solidarity deliveries focused on people with priority needs.",
+                "impact": "Service with social impact"
             },
             "project4": {
-                "name": "Zacapa Churches",
-                "description": "Support for multiple sister congregations to improve their spaces and strengthen their local ministry.",
-                "impact": "Strengthening local churches"
+                "name": "Missions and Campfires",
+                "description": "Outreach, fellowship, and evangelism activities for children, youth, and families.",
+                "impact": "Unity and community reach"
             }
         },
         "cta": "I Want to Be Part",
@@ -211,7 +243,7 @@
         },
         "otherMethods": "Other ways to donate",
         "bankTransfer": "Bank Transfer",
-        "bankDetails": "Bank: Your Local Bank<br/>Account: 123-456789-0",
+        "bankDetails": "For updated bank details, message us on WhatsApp and we will share the official information.",
         "inPerson": "In Person",
         "inPersonDesc": "Sundays during our services",
         "onlineDonation": "Donate Online",
@@ -224,7 +256,7 @@
         "subtitle": "We are here to serve you. Get in touch with us for any questions, prayer requests, or to visit us.",
         "infoTitle": "Contact Information",
         "address": "Address",
-        "addressValue": "Faith Street 123, Hope Neighborhood<br />San Pedro Sula, Honduras",
+        "addressValue": "San Pedro Sula, Cortés<br />Honduras",
         "phone": "Phone",
         "whatsapp": "WhatsApp",
         "whatsappChat": "Chat with us",
@@ -261,5 +293,13 @@
         "copyright": "All rights reserved.",
         "madeWith": "Made with",
         "for": "for the glory of God"
+    },
+    "media": {
+        "title": "Media Center",
+        "subtitle": "Gallery organized by real ministry context: temple services, life houses, community service, missions, and campfires.",
+        "previewHint": "Click any photo to preview it in large format.",
+        "photos": "Photos",
+        "videos": "Videos",
+        "showMore": "Load more"
     }
 }

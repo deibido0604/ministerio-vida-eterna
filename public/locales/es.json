@@ -7,11 +7,13 @@
     "header": {
         "home": "Inicio",
         "history": "Historia",
-        "trips": "Viajes 2026",
+        "trips": "Actividades",
+        "media": "Multimedia",
         "projects": "Proyectos",
         "ministries": "Ministerios",
         "donations": "Donaciones",
         "contact": "Contacto",
+        "language": "Idioma",
         "callUs": "Llámanos",
         "mainPhone": "Teléfono principal"
     },
@@ -42,10 +44,10 @@
     },
     "history": {
         "title": "Nuestra Historia",
-        "subtitle": "Cómo comenzó este ministerio",
-        "paragraph1": "El Ministerio Vida Eterna nació en 1995 como un pequeño grupo de estudio bíblico en el hogar de nuestros fundadores, el Pastor Juan y María Pérez. Lo que comenzó con 10 personas se convirtió en una comunidad vibrante.",
-        "paragraph2": "En el año 2000, Dios nos permitió adquirir nuestro primer terreno donde construimos el primer templo. Desde entonces, hemos crecido para incluir múltiples ministerios, programas de ayuda social y misiones.",
-        "paragraph3": "Hoy, nuestro campamento recibe a cientos de personas cada año que buscan un encuentro transformador con Dios. Creemos que cada vida es importante y que juntos podemos hacer la diferencia.",
+        "subtitle": "Nuestro caminar como comunidad cristiana en Honduras",
+        "paragraph1": "Ministerio Vida Eterna se consolidó como una comunidad de oración, adoración y enseñanza bíblica, sirviendo de forma constante a familias de San Pedro Sula y zonas cercanas.",
+        "paragraph2": "Con el paso del tiempo, el ministerio fortaleció su trabajo en casas de vida, cultos congregacionales, brigadas de apoyo comunitario, misiones y formación espiritual para niños, jóvenes y adultos.",
+        "paragraph3": "Actualmente seguimos enfocados en discipular, servir y anunciar el Evangelio con acciones concretas: acompañamiento pastoral, ayuda solidaria y proyectos para el crecimiento de la iglesia local.",
         "mission": "Misión",
         "missionText": "Llevar el amor de Cristo a cada persona, transformando vidas a través de la enseñanza bíblica, el discipulado y el servicio comunitario.",
         "vision": "Visión",
@@ -54,115 +56,145 @@
         "valuesList": "Amor, Unidad, Servicio, Fe, Esperanza"
     },
     "trips": {
-        "title": "Viajes y Misiones",
-        "subtitle": "Únete a nuestras expediciones de fe",
-        "upcoming": "Próximos Viajes",
-        "trip1": {
-            "title": "Misión San Pedro Sula",
-            "date": "15-22 Julio 2024",
-            "description": "Apoyo comunitario, evangelismo y trabajo con niños en las zonas más necesitadas.",
-            "spots": "Cupos disponibles: 12"
-        },
-        "trip2": {
-            "title": "Campamento Juvenil",
-            "date": "5-12 Agosto 2024",
-            "description": "Un retiro para jóvenes con actividades recreativas, estudios bíblicos y fogatas.",
-            "spots": "Cupos disponibles: 25"
-        },
-        "trip3": {
-            "title": "Misión Internacional",
-            "date": "10-24 Septiembre 2024",
-            "description": "Viaje a Guatemala para apoyar iglesias hermanas y proyectos de construcción.",
-            "spots": "Cupos disponibles: 8"
-        },
-        "cta": "Inscríbete",
-        "moreInfo": "Más información"
+        "title": "Actividades Reales del Ministerio",
+        "subtitle": "Estas son las obras que actualmente realizamos como iglesia en la comunidad.",
+        "cards": {
+            "templo": {
+                "title": "Construcción del Templo",
+                "frequency": "Proyecto activo",
+                "description": "Avance de estructura, techado y mejoras del espacio para la congregación.",
+                "detail": "Trabajo continuo con apoyo de hermanos y voluntarios."
+            },
+            "culto": {
+                "title": "Cultos de la Iglesia",
+                "frequency": "Semanal",
+                "description": "Reuniones de adoración, enseñanza y oración como comunidad de fe.",
+                "detail": "Participación de niños, jóvenes y adultos en cada servicio."
+            },
+            "casas": {
+                "title": "Casas de Vida",
+                "frequency": "Miércoles",
+                "description": "Visitamos hogares de miembros para desarrollar temas bíblicos y abrir espacio a vecinos.",
+                "detail": "Evangelismo en hogares y fortalecimiento espiritual familiar."
+            },
+            "brigada": {
+                "title": "Brigadas Médicas Comunitarias",
+                "frequency": "Jornadas especiales",
+                "description": "Atención comunitaria en coordinación con ONG locales.",
+                "detail": "Apoyo preventivo, orientación y servicio social a familias."
+            },
+            "ensayos": {
+                "title": "Ensayos Bíblicos",
+                "frequency": "Formación continua",
+                "description": "Espacios de práctica y aprendizaje de contenido bíblico para grupos de servicio.",
+                "detail": "Preparación de participaciones y crecimiento en la Palabra."
+            },
+            "misiones": {
+                "title": "Misiones Comunitarias",
+                "frequency": "Salida misionera",
+                "description": "Visitas al hogar de ancianos, Villas del Cerro y clases de valores bíblicos en escuelas.",
+                "detail": "Llevamos acompañamiento, enseñanza y esperanza en cada visita."
+            },
+            "fogatas": {
+                "title": "Fogatas, Piñatas y Danzas",
+                "frequency": "Actividades familiares",
+                "description": "Encuentros con dinámicas, decoraciones y convivencia para niños y familias.",
+                "detail": "Celebraciones sanas que fortalecen unidad y alegría cristiana."
+            },
+            "entrega": {
+                "title": "Entrega de Ropa y Víveres",
+                "frequency": "Acción solidaria",
+                "description": "Distribución de ayuda material a personas y familias con necesidad.",
+                "detail": "Canalizamos donaciones hacia comunidades prioritarias."
+            }
+        }
     },
     "projects": {
         "title": "Proyectos de Transformación",
-        "subtitle": "Nuestros proyectos buscan transformar vidas y comunidades a través del amor y servicio cristiano",
+        "subtitle": "Estas líneas de trabajo reflejan la labor actual del ministerio en la comunidad.",
         "initiatives": "Iniciativas Principales",
+        "impactTitle": "Impacto del proyecto:",
         "project1": {
-            "title": "Casa Misión Santiago",
-            "description": "Apoyamos la adquisición de una casa misión que sirve como hogar para nuestro misionero residente en San Pedro Sula, facilitando su trabajo evangelístico y de servicio comunitario.",
-            "urgency": "Necesidad Actual",
+            "title": "Consolidación de Cultos Congregacionales",
+            "description": "Fortalecer los servicios de adoración, enseñanza y oración para niños, jóvenes y adultos durante la semana.",
+            "urgency": "Prioridad actual",
             "benefits": [
-                "Base para trabajo misionero",
-                "Hospedaje para voluntarios",
-                "Centro de distribución de ayuda"
+                "Mayor participación familiar",
+                "Discipulado continuo",
+                "Cobertura pastoral constante"
             ]
         },
         "project2": {
-            "title": "Casa de Yolany",
-            "description": "Apoyamos regularmente un hogar que actualmente brinda cuidado y educación a niños en situación vulnerable, asegurando sus necesidades básicas y desarrollo integral.",
-            "urgency": "Apoyo Continuo",
+            "title": "Fortalecimiento de Casas de Vida",
+            "description": "Ampliar y acompañar los grupos en hogares para evangelismo, enseñanza bíblica y oración en sectores cercanos.",
+            "urgency": "Ejecución continua",
             "benefits": [
-                "Alimentación diaria",
-                "Educación y cuidado",
-                "Atención médica básica"
+                "Alcance en barrios y colonias",
+                "Cuidado espiritual por familia",
+                "Integración de nuevos creyentes"
             ]
         },
         "project3": {
-            "title": "Hogar Infantil GN",
-            "description": "Trabajamos para establecer un nuevo hogar que pueda albergar y proveer un ambiente familiar a niños que necesitan un lugar seguro para crecer y desarrollarse.",
-            "urgency": "Proyecto en Marcha",
+            "title": "Construcción y Mejora del Templo",
+            "description": "Avance de infraestructura para cultos, discipulado y reuniones comunitarias en mejores condiciones.",
+            "urgency": "Obra en marcha",
             "benefits": [
-                "Espacio adecuado para niños",
-                "Ambiente familiar",
-                "Programas de desarrollo"
+                "Espacios más seguros",
+                "Mayor capacidad para congregación",
+                "Mejor atención a niños y jóvenes"
             ]
         },
         "project4": {
-            "title": "Nuevo Orfanato",
-            "description": "Buscamos expandir nuestro alcance abriendo nuevos hogares en diferentes ciudades de Honduras para atender a más niños y jóvenes en necesidad.",
-            "urgency": "Expansión Necesaria",
+            "title": "Brigadas y Servicio Comunitario",
+            "description": "Jornadas de apoyo y orientación para familias, junto a acciones solidarias en coordinación con voluntarios.",
+            "urgency": "Cobertura en expansión",
             "benefits": [
-                "Más capacidad de atención",
-                "Ubicaciones estratégicas",
-                "Programas especializados"
+                "Atención a necesidades inmediatas",
+                "Vínculo directo con la comunidad",
+                "Testimonio cristiano en acción"
             ]
         },
         "project5": {
-            "title": "Proyecto Iglesia Villanueva",
-            "description": "Ampliación de nuestras instalaciones para incluir espacios dedicados a programas comunitarios, cuidado infantil y servicios de alimentación para la comunidad.",
-            "urgency": "Desarrollo Comunitario",
+            "title": "Misiones y Alcance Comunitario",
+            "description": "Visitas misioneras a comunidades, hogares y centros educativos para compartir el Evangelio y valores bíblicos.",
+            "urgency": "Respuesta solidaria",
             "benefits": [
-                "Espacio para programas sociales",
-                "Guardería comunitaria",
-                "Centro de ayuda alimentaria"
+                "Evangelismo práctico",
+                "Acompañamiento espiritual",
+                "Formación en valores cristianos"
             ]
         },
         "project6": {
-            "title": "Proyecto Iglesia Gerizem",
-            "description": "Planificación de nuevas instalaciones que servirán como centro de adoración y servicio comunitario, expandiendo nuestro impacto en la región.",
-            "urgency": "Visión a Futuro",
+            "title": "Entrega Solidaria y Convivencias",
+            "description": "Distribución de ropa y víveres junto con fogatas y actividades familiares para fortalecer unidad y esperanza.",
+            "urgency": "Calendario activo",
             "benefits": [
-                "Nuevo centro de adoración",
-                "Expansión del ministerio",
-                "Mayor alcance comunitario"
+                "Alivio a familias vulnerables",
+                "Integración de niños y jóvenes",
+                "Comunidad más unida"
             ]
         },
         "churchProjects": {
-            "title": "Desarrollo de Iglesias",
+            "title": "Frentes de Trabajo Activos",
             "project1": {
-                "name": "El Rey Ya Viene - San Pedro Sula",
-                "description": "Mejoramos nuestras instalaciones para ofrecer mejores espacios de enseñanza y desarrollo espiritual para todas las edades.",
-                "impact": "Ampliación de capacidad educativa"
+                "name": "Cultos Congregacionales",
+                "description": "Fortalecimiento de reuniones de adoración, enseñanza y oración con enfoque familiar.",
+                "impact": "Consolidación espiritual"
             },
             "project2": {
-                "name": "El Rey Ya Viene - Quimistán",
-                "description": "Establecimiento de una nueva congregación hermana con planes de crecimiento y servicio a la comunidad local.",
-                "impact": "Nueva comunidad de fe"
+                "name": "Formación Bíblica",
+                "description": "Escuela bíblica, ensayos y capacitación de equipos de servicio para fortalecer doctrina y práctica.",
+                "impact": "Crecimiento en la Palabra"
             },
             "project3": {
-                "name": "El Rey Ya Viene - Le Ceba",
-                "description": "Iniciativa para llevar el mensaje del Evangelio a una comunidad que actualmente carece de presencia cristiana organizada.",
-                "impact": "Evangelismo en nueva área"
+                "name": "Apoyo Comunitario",
+                "description": "Brigadas y entregas solidarias dirigidas a personas con necesidades prioritarias.",
+                "impact": "Servicio con impacto social"
             },
             "project4": {
-                "name": "Iglesias Zacapa",
-                "description": "Apoyo a múltiples congregaciones hermanas para mejorar sus espacios y fortalecer su ministerio local.",
-                "impact": "Fortalecimiento de iglesias locales"
+                "name": "Misiones y Fogatas",
+                "description": "Actividades de alcance, convivencia y evangelismo para niños, jóvenes y familias.",
+                "impact": "Unidad y alcance comunitario"
             }
         },
         "cta": "Quiero Ser Parte",
@@ -211,7 +243,7 @@
         },
         "otherMethods": "Otras formas de donar",
         "bankTransfer": "Transferencia Bancaria",
-        "bankDetails": "Banco: Tu Banco Local<br/>Cuenta: 123-456789-0",
+        "bankDetails": "Para datos bancarios actualizados, escríbenos por WhatsApp y te compartimos la información oficial.",
         "inPerson": "En Persona",
         "inPersonDesc": "Domingos durante nuestros servicios",
         "onlineDonation": "Donar en Línea",
@@ -224,7 +256,7 @@
         "subtitle": "Estamos aquí para servirte. Ponte en contacto con nosotros para cualquier consulta, oración o para visitarnos.",
         "infoTitle": "Información de Contacto",
         "address": "Dirección",
-        "addressValue": "Calle de la Fe 123, Col. Esperanza<br />San Pedro Sula, Honduras",
+        "addressValue": "San Pedro Sula, Cortés<br />Honduras",
         "phone": "Teléfonos",
         "whatsapp": "WhatsApp",
         "whatsappChat": "Chatea con nosotros",
@@ -261,5 +293,13 @@
         "copyright": "Todos los derechos reservados.",
         "madeWith": "Hecho con",
         "for": "para la gloria de Dios"
+    },
+    "media": {
+        "title": "Centro Multimedia",
+        "subtitle": "Galería organizada por contexto real del ministerio: templos, casas de vida, servicio comunitario, misiones y fogatas.",
+        "previewHint": "Haz clic en cualquier foto para previsualizarla en grande.",
+        "photos": "Fotografías",
+        "videos": "Videos",
+        "showMore": "Cargar más"
     }
 }

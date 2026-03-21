@@ -41,7 +41,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   }, [language]);
 
   const t = (key: string): string => {
-    const keys = key.split('.');
+    const keys = key
+      .replace(/\[(\d+)\]/g, '.$1')
+      .split('.');
     let value = translations;
     
     for (const k of keys) {

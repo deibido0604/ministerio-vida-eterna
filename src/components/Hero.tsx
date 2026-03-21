@@ -1,36 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronDown, X } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Hero: React.FC = () => {
     const { t } = useLanguage();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
-    
+    const [previewImage, setPreviewImage] = useState<string | null>(null);
     const carouselImages = [
-    {
-        id: 1,
-        image: "/images/hero/iglesia1.jpg",
-        title: t('hero.slide1.title'),
-        description: t('hero.slide1.description')
-    },
-    {
-        id: 2,
-        image: "/images/hero/iglesia2.jpg",
-        title: t('hero.slide2.title'),
-        description: t('hero.slide2.description')
-    },
-    {
-        id: 3,
-        image: "/images/hero/iglesia3.jpg",
-        title: t('hero.slide3.title'),
-        description: t('hero.slide3.description')
-    },
-];
+        '/images/curadas/culto-iglesia/culto_03.jpeg',
+        '/images/curadas/culto-iglesia/culto_06.jpeg',
+        '/images/curadas/culto-iglesia/culto_08.jpeg',
+        '/images/curadas/culto-iglesia/culto_10.jpeg',
+        '/images/Casas de vida/WhatsApp Image 2026-03-21 at 2.38.01 PM (4).jpeg',
+        '/images/Casas de vida/WhatsApp Image 2026-03-21 at 2.38.01 PM (6).jpeg',
+        '/images/Casas de vida/WhatsApp Image 2026-03-21 at 2.38.02 PM (2).jpeg',
+        '/images/curadas/brigada-medica-comunitaria/brigada_07.jpeg',
+        '/images/curadas/brigada-medica-comunitaria/brigada_10.jpeg',
+        '/images/curadas/brigada-medica-comunitaria/brigada_13.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_11.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_16.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_22.jpeg',
+        '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.39.47 PM (1).jpeg',
+        '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.39.48 PM (2).jpeg',
+        '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.41.30 PM (5).jpeg',
+        '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.41.31 PM (2).jpeg',
+        '/images/Actividades/WhatsApp Image 2026-03-21 at 2.37.01 PM (2).jpeg',
+        '/images/Actividades/WhatsApp Image 2026-03-21 at 2.37.05 PM (3).jpeg'
+    ];
 
     // Auto-carrusel
     useEffect(() => {
-        if (!isHovered) {
+        if (!isHovered && carouselImages.length > 0) {
             const interval = setInterval(() => {
                 setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
             }, 4000);
@@ -39,15 +40,13 @@ const Hero: React.FC = () => {
     }, [carouselImages.length, isHovered]);
 
     const nextSlide = () => {
+        if (carouselImages.length === 0) return;
         setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
     };
 
     const prevSlide = () => {
+        if (carouselImages.length === 0) return;
         setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
-    };
-
-    const goToSlide = (index: number) => {
-        setCurrentSlide(index);
     };
 
     const scrollToSection = (sectionId: string) => {
@@ -67,27 +66,23 @@ const Hero: React.FC = () => {
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     >
-                        {carouselImages.map((image, index) => (
-                            <div
-                                key={image.id}
-                                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                                    index === currentSlide ? "opacity-100" : "opacity-0"
-                                }`}
-                            >
-                                <img
-                                    src={image.image}
-                                    alt={image.title}
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                                
-                                {/* Texto superpuesto en la imagen */}
-                                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <h3 className="text-xl font-bold mb-2">{image.title}</h3>
-                                    <p className="text-sm opacity-90">{image.description}</p>
-                                </div>
+                        <div className="absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100">
+                            <img
+                                src={carouselImages[currentSlide]}
+                                alt={`${t('hero.title')} ${currentSlide + 1}`}
+                                className="w-full h-full object-cover cursor-zoom-in"
+                                onClick={() => setPreviewImage(carouselImages[currentSlide])}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+
+                            {/* Texto superpuesto en la imagen */}
+                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 className="text-xl font-bold mb-2">{t('hero.title')}</h3>
+                                <p className="text-sm opacity-90">
+                                    {currentSlide + 1} / {carouselImages.length} · {t('hero.community')}
+                                </p>
                             </div>
-                        ))}
+                        </div>
 
                         {/* Controles del carrusel */}
                         <button
@@ -105,21 +100,6 @@ const Hero: React.FC = () => {
                             <ChevronRight className="h-5 w-5" />
                         </button>
 
-                        {/* Indicadores del carrusel */}
-                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-                            {carouselImages.map((_, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => goToSlide(index)}
-                                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                                        index === currentSlide 
-                                            ? 'bg-white w-6' 
-                                            : 'bg-white/40 hover:bg-white/60 w-1.5'
-                                    }`}
-                                    aria-label={`Ir al slide ${index + 1}`}
-                                />
-                            ))}
-                        </div>
                     </div>
 
                     {/* Contenido informativo - Lado derecho */}
@@ -195,6 +175,23 @@ const Hero: React.FC = () => {
                     </button>
                 </div>
             </div>
+
+            {previewImage && (
+                <div className="fixed inset-0 z-[100] bg-black/85 p-4 flex items-center justify-center">
+                    <button
+                        onClick={() => setPreviewImage(null)}
+                        className="absolute right-5 top-5 text-white p-2 rounded-full bg-black/40 hover:bg-black/60"
+                        aria-label="Cerrar previsualizacion"
+                    >
+                        <X className="h-6 w-6" />
+                    </button>
+                    <img
+                        src={previewImage}
+                        alt="Previsualizacion"
+                        className="max-h-[90vh] max-w-[95vw] object-contain rounded-lg"
+                    />
+                </div>
+            )}
         </section>
     );
 };

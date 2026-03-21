@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Heart, MapPin, Phone, Mail } from 'lucide-react';
+import { MessageCircle, Mail, Heart, MapPin, Phone } from 'lucide-react';
 import { useLanguage } from 'context/LanguageContext';
 
 const Footer: React.FC = () => {
@@ -22,6 +22,7 @@ const Footer: React.FC = () => {
               <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">{t('header.home')}</a></li>
               <li><a href="#history" className="text-gray-400 hover:text-white transition-colors">{t('header.history')}</a></li>
               <li><a href="#trips" className="text-gray-400 hover:text-white transition-colors">{t('header.trips')}</a></li>
+              <li><a href="#media" className="text-gray-400 hover:text-white transition-colors">{t('header.media')}</a></li>
               <li><a href="#projects" className="text-gray-400 hover:text-white transition-colors">{t('header.projects')}</a></li>
               <li><a href="#ministries" className="text-gray-400 hover:text-white transition-colors">{t('header.ministries')}</a></li>
               <li><a href="#donations" className="text-gray-400 hover:text-white transition-colors">{t('header.donations')}</a></li>
@@ -50,11 +51,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Redes Sociales</h4>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" className="bg-gray-800 p-2 rounded-full hover:bg-blue-600 transition-colors">
-                <Facebook className="h-5 w-5" />
+              <a href="https://wa.me/50412345678" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-green-600 transition-colors">
+                <MessageCircle className="h-5 w-5" />
               </a>
-              <a href="https://instagram.com" className="bg-gray-800 p-2 rounded-full hover:bg-pink-600 transition-colors">
-                <Instagram className="h-5 w-5" />
+              <a href="mailto:info@ministeriovidaeterna.org" className="bg-gray-800 p-2 rounded-full hover:bg-blue-600 transition-colors">
+                <Mail className="h-5 w-5" />
               </a>
             </div>
           </div>

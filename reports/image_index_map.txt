@@ -1,0 +1,164 @@
+﻿## Actividades
+001 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.13 PM.jpeg
+002 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.14 PM (1).jpeg
+003 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.14 PM (2).jpeg
+004 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.14 PM (3).jpeg
+005 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.14 PM (4).jpeg
+006 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.14 PM (5).jpeg
+007 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.14 PM (6).jpeg
+008 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.14 PM (7).jpeg
+009 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.14 PM.jpeg
+010 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.15 PM (1).jpeg
+011 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.15 PM.jpeg
+012 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.19 PM.jpeg
+013 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.22 PM.jpeg
+014 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.24 PM (1).jpeg
+015 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.24 PM (2).jpeg
+016 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.24 PM (3).jpeg
+017 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.24 PM (4).jpeg
+018 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.24 PM (5).jpeg
+019 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.24 PM.jpeg
+020 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.25 PM (1).jpeg
+021 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.25 PM (2).jpeg
+022 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.35.25 PM.jpeg
+023 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.00 PM (1).jpeg
+024 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.00 PM (2).jpeg
+025 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.00 PM (3).jpeg
+026 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.00 PM (4).jpeg
+027 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.00 PM (5).jpeg
+028 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.00 PM (6).jpeg
+029 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.00 PM.jpeg
+030 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.01 PM (1).jpeg
+031 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.01 PM (2).jpeg
+032 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.01 PM (3).jpeg
+033 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.01 PM (4).jpeg
+034 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.01 PM.jpeg
+035 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.02 PM (1).jpeg
+036 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.02 PM (2).jpeg
+037 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.02 PM.jpeg
+038 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.04 PM (1).jpeg
+039 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.04 PM (2).jpeg
+040 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.04 PM (3).jpeg
+041 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.04 PM.jpeg
+042 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.05 PM (1).jpeg
+043 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.05 PM (2).jpeg
+044 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.05 PM (3).jpeg
+045 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.05 PM (4).jpeg
+046 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.05 PM (5).jpeg
+047 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.05 PM (6).jpeg
+048 | public\images\Actividades\WhatsApp Image 2026-03-21 at 2.37.05 PM.jpeg
+
+## Casas de vida
+001 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.37.58 PM (1).jpeg
+002 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.37.58 PM (2).jpeg
+003 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.37.58 PM (3).jpeg
+004 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.37.58 PM.jpeg
+005 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.37.59 PM (1).jpeg
+006 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.37.59 PM (2).jpeg
+007 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.37.59 PM (3).jpeg
+008 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.37.59 PM (4).jpeg
+009 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.37.59 PM (5).jpeg
+010 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.37.59 PM (6).jpeg
+011 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.37.59 PM.jpeg
+012 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.00 PM (1).jpeg
+013 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.00 PM (2).jpeg
+014 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.00 PM (3).jpeg
+015 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.00 PM (4).jpeg
+016 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.00 PM (5).jpeg
+017 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.00 PM (6).jpeg
+018 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.00 PM (7).jpeg
+019 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.00 PM.jpeg
+020 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.01 PM (1).jpeg
+021 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.01 PM (2).jpeg
+022 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.01 PM (3).jpeg
+023 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.01 PM (4).jpeg
+024 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.01 PM (5).jpeg
+025 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.01 PM (6).jpeg
+026 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.01 PM (7).jpeg
+027 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.01 PM.jpeg
+028 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.02 PM (1).jpeg
+029 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.02 PM (2).jpeg
+030 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.02 PM (3).jpeg
+031 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.02 PM (4).jpeg
+032 | public\images\Casas de vida\WhatsApp Image 2026-03-21 at 2.38.02 PM.jpeg
+
+## Fogatas
+001 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.42 PM.jpeg
+002 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.43 PM (1).jpeg
+003 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.43 PM (2).jpeg
+004 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.43 PM (3).jpeg
+005 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.43 PM (4).jpeg
+006 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.43 PM (5).jpeg
+007 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.43 PM.jpeg
+008 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.44 PM (1).jpeg
+009 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.44 PM (2).jpeg
+010 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.44 PM (3).jpeg
+011 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.44 PM.jpeg
+012 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.45 PM (1).jpeg
+013 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.45 PM (2).jpeg
+014 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.45 PM (3).jpeg
+015 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.45 PM.jpeg
+016 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.46 PM (1).jpeg
+017 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.46 PM (2).jpeg
+018 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.46 PM (3).jpeg
+019 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.46 PM (4).jpeg
+020 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.46 PM (5).jpeg
+021 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.46 PM.jpeg
+022 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.47 PM (1).jpeg
+023 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.47 PM (2).jpeg
+024 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.47 PM (3).jpeg
+025 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.47 PM (4).jpeg
+026 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.47 PM (5).jpeg
+027 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.47 PM.jpeg
+028 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.48 PM (1).jpeg
+029 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.48 PM (2).jpeg
+030 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.48 PM (3).jpeg
+031 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.48 PM (4).jpeg
+032 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.48 PM.jpeg
+033 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.39.49 PM.jpeg
+034 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.29 PM (1).jpeg
+035 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.29 PM (2).jpeg
+036 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.29 PM.jpeg
+037 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.30 PM (1).jpeg
+038 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.30 PM (2).jpeg
+039 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.30 PM (3).jpeg
+040 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.30 PM (4).jpeg
+041 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.30 PM (5).jpeg
+042 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.30 PM (6).jpeg
+043 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.30 PM (7).jpeg
+044 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.30 PM.jpeg
+045 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.31 PM (1).jpeg
+046 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.31 PM (2).jpeg
+047 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.31 PM (3).jpeg
+048 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.31 PM (4).jpeg
+049 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.31 PM (5).jpeg
+050 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.31 PM.jpeg
+051 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.32 PM (1).jpeg
+052 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.32 PM (2).jpeg
+053 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.32 PM.jpeg
+054 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.33 PM (1).jpeg
+055 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.33 PM (2).jpeg
+056 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.33 PM.jpeg
+057 | public\images\Fogatas\WhatsApp Image 2026-03-21 at 2.41.34 PM.jpeg
+
+## Templo
+001 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.37 PM (1).jpeg
+002 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.37 PM.jpeg
+003 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.38 PM (1).jpeg
+004 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.38 PM (2).jpeg
+005 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.38 PM.jpeg
+006 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.39 PM (1).jpeg
+007 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.39 PM (2).jpeg
+008 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.39 PM (3).jpeg
+009 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.39 PM (4).jpeg
+010 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.39 PM.jpeg
+011 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.40 PM (1).jpeg
+012 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.40 PM (2).jpeg
+013 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.40 PM (3).jpeg
+014 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.40 PM (4).jpeg
+015 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.40 PM (5).jpeg
+016 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.40 PM (6).jpeg
+017 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.40 PM.jpeg
+018 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.41 PM (1).jpeg
+019 | public\images\Templo\WhatsApp Image 2026-03-21 at 2.32.41 PM.jpeg
+

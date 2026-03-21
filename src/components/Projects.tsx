@@ -146,7 +146,7 @@ const Projects: React.FC = () => {
                   <p className="text-gray-600 mb-6">{project.description}</p>
                   
                   <div className="mb-6">
-                    <h5 className="font-semibold text-gray-700 mb-2">Impacto del proyecto:</h5>
+                    <h5 className="font-semibold text-gray-700 mb-2">{t('projects.impactTitle')}</h5>
                     <ul className="space-y-2">
                       {project.benefits.map((benefit, index) => (
                         <li key={index} className="flex items-start">
