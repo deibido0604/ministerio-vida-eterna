@@ -99,18 +99,31 @@ const Header: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6 text-gray-800" />
-            ) : (
-              <Menu className="h-6 w-6 text-gray-800" />
-            )}
-          </button>
+          {/* Mobile language + menu controls */}
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center space-x-1 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+              aria-label={t('header.language')}
+            >
+              <Globe className="h-4 w-4 text-gray-700" />
+              <span className="text-sm font-semibold text-gray-700 uppercase">
+                {language === 'es' ? 'ES' : 'EN'}
+              </span>
+            </button>
+
+            <button
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6 text-gray-800" />
+              ) : (
+                <Menu className="h-6 w-6 text-gray-800" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
