@@ -24,8 +24,6 @@ const CAROUSEL_IMAGE_CANDIDATES = [
     '/images/curadas/misiones-fogatas-pinatas/mision_29.jpeg',
     '/images/Actividades/WhatsApp Image 2026-03-21 at 2.35.13 PM.jpeg',
     '/images/Actividades/WhatsApp Image 2026-03-21 at 2.35.14 PM (1).jpeg',
-    '/images/Actividades/WhatsApp Image 2026-03-21 at 2.35.14 PM (3).jpeg',
-    '/images/Actividades/WhatsApp Image 2026-03-21 at 2.35.14 PM (5).jpeg',
     '/images/Actividades/WhatsApp Image 2026-03-21 at 2.35.15 PM (1).jpeg',
     '/images/Actividades/WhatsApp Image 2026-03-21 at 2.35.19 PM.jpeg',
     '/images/Actividades/WhatsApp Image 2026-03-21 at 2.35.22 PM.jpeg',
