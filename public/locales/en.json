@@ -297,7 +297,9 @@
     "media": {
         "title": "Media Center",
         "subtitle": "Gallery organized by real ministry context: temple services, life houses, community service, missions, and campfires.",
-        "previewHint": "Click any photo to preview it in large format.",
+        "previewHint": "Tap or click any photo to view it full size.",
+        "closePreview": "Close enlarged view",
+        "openEnlarged": "View larger",
         "photos": "Photos",
         "videos": "Videos",
         "showMore": "Load more"

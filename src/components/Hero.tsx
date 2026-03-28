@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, ChevronDown, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import ImageLightbox from './ImageLightbox';
 
 const CAROUSEL_IMAGE_CANDIDATES = [
     '/images/curadas/culto-iglesia/culto_03.jpeg',
@@ -8,20 +9,20 @@ const CAROUSEL_IMAGE_CANDIDATES = [
     '/images/curadas/culto-iglesia/culto_08.jpeg',
     '/images/curadas/culto-iglesia/culto_10.jpeg',
     '/images/Templo/WhatsApp Image 2026-03-21 at 2.32.40 PM (6).jpeg',
-    '/images/Casas de vida/WhatsApp Image 2026-03-21 at 2.38.01 PM (4).jpeg',
-    '/images/Casas de vida/WhatsApp Image 2026-03-21 at 2.38.01 PM (6).jpeg',
-    '/images/Casas de vida/WhatsApp Image 2026-03-21 at 2.38.02 PM (2).jpeg',
+    '/images/curadas/casas-de-vida/casa_04.jpeg',
+    '/images/curadas/casas-de-vida/casa_05.jpeg',
+    '/images/curadas/casas-de-vida/casa_06.jpeg',
     '/images/curadas/brigada-medica-comunitaria/brigada_07.jpeg',
     '/images/curadas/brigada-medica-comunitaria/brigada_10.jpeg',
     '/images/curadas/brigada-medica-comunitaria/brigada_13.jpeg',
     '/images/curadas/misiones-fogatas-pinatas/mision_11.jpeg',
     '/images/curadas/misiones-fogatas-pinatas/mision_16.jpeg',
     '/images/curadas/misiones-fogatas-pinatas/mision_22.jpeg',
-    '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.39.47 PM (1).jpeg',
-    '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.39.48 PM (2).jpeg',
-    '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.41.30 PM (5).jpeg',
-    '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.41.31 PM (2).jpeg',
-    '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.41.33 PM.jpeg',
+    '/images/curadas/misiones-fogatas-pinatas/mision_18.jpeg',
+    '/images/curadas/misiones-fogatas-pinatas/mision_19.jpeg',
+    '/images/curadas/misiones-fogatas-pinatas/mision_24.jpeg',
+    '/images/curadas/misiones-fogatas-pinatas/mision_25.jpeg',
+    '/images/curadas/misiones-fogatas-pinatas/mision_29.jpeg',
     '/images/Actividades/WhatsApp Image 2026-03-21 at 2.35.13 PM.jpeg',
     '/images/Actividades/WhatsApp Image 2026-03-21 at 2.35.14 PM (1).jpeg',
     '/images/Actividades/WhatsApp Image 2026-03-21 at 2.35.14 PM (3).jpeg',
@@ -249,22 +250,12 @@ const Hero: React.FC = () => {
                 </div>
             </div>
 
-            {previewImage && (
-                <div className="fixed inset-0 z-[100] bg-black/85 p-4 flex items-center justify-center">
-                    <button
-                        onClick={() => setPreviewImage(null)}
-                        className="absolute right-5 top-5 text-white p-2 rounded-full bg-black/40 hover:bg-black/60"
-                        aria-label="Cerrar previsualizacion"
-                    >
-                        <X className="h-6 w-6" />
-                    </button>
-                    <img
-                        src={previewImage}
-                        alt="Previsualizacion"
-                        className="max-h-[90vh] max-w-[95vw] object-contain rounded-lg"
-                    />
-                </div>
-            )}
+            <ImageLightbox
+                src={previewImage}
+                alt={t('hero.title')}
+                onClose={() => setPreviewImage(null)}
+                closeLabel={t('media.closePreview')}
+            />
         </section>
     );
 };

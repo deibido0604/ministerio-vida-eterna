@@ -297,7 +297,9 @@
     "media": {
         "title": "Centro Multimedia",
         "subtitle": "Galería organizada por contexto real del ministerio: templos, casas de vida, servicio comunitario, misiones y fogatas.",
-        "previewHint": "Haz clic en cualquier foto para previsualizarla en grande.",
+        "previewHint": "Toca o haz clic en cualquier foto para verla en grande.",
+        "closePreview": "Cerrar vista ampliada",
+        "openEnlarged": "Ver en grande",
         "photos": "Fotografías",
         "videos": "Videos",
         "showMore": "Cargar más"

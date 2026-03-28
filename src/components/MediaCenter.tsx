@@ -1,6 +1,7 @@
 import React from 'react';
 import { PlayCircle, Image as ImageIcon } from 'lucide-react';
 import { useLanguage } from 'context/LanguageContext';
+import ImageLightbox from 'components/ImageLightbox';
 
 type MediaSection = {
   titleEs: string;
@@ -19,12 +20,16 @@ const INITIAL_VIDEOS = 4;
 const STEP_IMAGES = 18;
 const STEP_VIDEOS = 4;
 
+/** Claves internas del manifiesto que no deben mostrarse como categorías al visitante. */
+const SECTION_KEYS_HIDDEN_FROM_UI = new Set(['hero']);
+
 const MediaCenter = () => {
   const { language, t } = useLanguage();
   const [manifest, setManifest] = React.useState<MediaManifest | null>(null);
   const [activeSection, setActiveSection] = React.useState<string>('templo');
   const [imageLimitBySection, setImageLimitBySection] = React.useState<Record<string, number>>({});
   const [videoLimitBySection, setVideoLimitBySection] = React.useState<Record<string, number>>({});
+  const [previewImage, setPreviewImage] = React.useState<{ src: string; alt: string } | null>(null);
 
   React.useEffect(() => {
     const loadManifest = async () => {
@@ -33,7 +38,7 @@ const MediaCenter = () => {
 
       setManifest(data);
 
-      const sectionKeys = Object.keys(data.sections);
+      const sectionKeys = Object.keys(data.sections).filter((k) => !SECTION_KEYS_HIDDEN_FROM_UI.has(k));
       if (sectionKeys.length > 0) {
         setActiveSection((prev) => (sectionKeys.includes(prev) ? prev : sectionKeys[0]));
       }
@@ -55,13 +60,19 @@ const MediaCenter = () => {
     return null;
   }
 
-  const sectionKeys = Object.keys(manifest.sections);
-  const active = manifest.sections[activeSection] ?? manifest.sections[sectionKeys[0]];
-  const visibleImages = active.images.slice(0, imageLimitBySection[activeSection] ?? INITIAL_IMAGES);
-  const visibleVideos = active.videos.slice(0, videoLimitBySection[activeSection] ?? INITIAL_VIDEOS);
+  const sectionKeys = Object.keys(manifest.sections).filter((k) => !SECTION_KEYS_HIDDEN_FROM_UI.has(k));
+  if (sectionKeys.length === 0) {
+    return null;
+  }
+  const effectiveSection = sectionKeys.includes(activeSection) ? activeSection : sectionKeys[0];
+  const active = manifest.sections[effectiveSection];
+  const visibleImages = active.images.slice(0, imageLimitBySection[effectiveSection] ?? INITIAL_IMAGES);
+  const visibleVideos = active.videos.slice(0, videoLimitBySection[effectiveSection] ?? INITIAL_VIDEOS);
 
-  const hasMoreImages = (imageLimitBySection[activeSection] ?? INITIAL_IMAGES) < active.images.length;
-  const hasMoreVideos = (videoLimitBySection[activeSection] ?? INITIAL_VIDEOS) < active.videos.length;
+  const hasMoreImages =
+    (imageLimitBySection[effectiveSection] ?? INITIAL_IMAGES) < active.images.length;
+  const hasMoreVideos =
+    (videoLimitBySection[effectiveSection] ?? INITIAL_VIDEOS) < active.videos.length;
 
   const getSectionTitle = (key: string): string => {
     const section = manifest.sections[key];
@@ -71,14 +82,14 @@ const MediaCenter = () => {
   const loadMoreImages = () => {
     setImageLimitBySection((prev) => ({
       ...prev,
-      [activeSection]: (prev[activeSection] ?? INITIAL_IMAGES) + STEP_IMAGES,
+      [effectiveSection]: (prev[effectiveSection] ?? INITIAL_IMAGES) + STEP_IMAGES,
     }));
   };
 
   const loadMoreVideos = () => {
     setVideoLimitBySection((prev) => ({
       ...prev,
-      [activeSection]: (prev[activeSection] ?? INITIAL_VIDEOS) + STEP_VIDEOS,
+      [effectiveSection]: (prev[effectiveSection] ?? INITIAL_VIDEOS) + STEP_VIDEOS,
     }));
   };
 
@@ -94,7 +105,7 @@ const MediaCenter = () => {
         <div className="flex flex-wrap gap-3 mb-8 justify-center">
           {sectionKeys.map((key) => {
             const section = manifest.sections[key];
-            const isActive = activeSection === key;
+            const isActive = effectiveSection === key;
             return (
               <button
                 key={key}
@@ -119,14 +130,26 @@ const MediaCenter = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {visibleImages.map((src, index) => (
-              <img
-                key={`${activeSection}-img-${index}`}
-                src={src}
-                alt={`${getSectionTitle(activeSection)} ${index + 1}`}
-                className="h-44 w-full object-cover hover:scale-105 transition-transform duration-300 rounded-lg border border-gray-200 cursor-zoom-in"
-                loading="lazy"
-                decoding="async"
-              />
+              <button
+                key={`${effectiveSection}-img-${index}`}
+                type="button"
+                className="h-44 w-full overflow-hidden rounded-lg border border-gray-200 bg-transparent p-0 transition-transform duration-300 hover:scale-105 cursor-zoom-in"
+                onClick={() =>
+                  setPreviewImage({
+                    src,
+                    alt: `${getSectionTitle(effectiveSection)} ${index + 1}`,
+                  })
+                }
+                aria-label={`${getSectionTitle(effectiveSection)} ${index + 1} — ${t('media.openEnlarged')}`}
+              >
+                <img
+                  src={src}
+                  alt=""
+                  className="pointer-events-none h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
             ))}
           </div>
 
@@ -152,7 +175,7 @@ const MediaCenter = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {visibleVideos.map((src, index) => (
                 <video
-                  key={`${activeSection}-video-${index}`}
+                  key={`${effectiveSection}-video-${index}`}
                   src={src}
                   controls
                   preload="metadata"
@@ -174,6 +197,13 @@ const MediaCenter = () => {
           </div>
         )}
       </div>
+
+      <ImageLightbox
+        src={previewImage?.src ?? null}
+        alt={previewImage?.alt ?? ''}
+        onClose={() => setPreviewImage(null)}
+        closeLabel={t('media.closePreview')}
+      />
     </section>
   );
 };

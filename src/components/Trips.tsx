@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useLanguage } from 'context/LanguageContext';
 import { HeartHandshake, Home, Landmark, Stethoscope, BookOpen, PartyPopper, Hand, Church } from 'lucide-react';
+import ImageLightbox from 'components/ImageLightbox';
 
 const Trips: React.FC = () => {
   const { t, language } = useLanguage();
   const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>({});
+  const [previewImage, setPreviewImage] = useState<{ src: string; alt: string } | null>(null);
 
   const toggleExpanded = (id: number) => {
     setExpandedCards((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -48,7 +50,7 @@ const Trips: React.FC = () => {
         '/images/curadas/casas-de-vida/casa_03.jpeg',
         '/images/curadas/casas-de-vida/casa_04.jpeg',
         '/images/curadas/casas-de-vida/casa_05.jpeg',
-        '/images/curadas/casas-de-vida/casa_06.jpeg'   
+        '/images/curadas/casas-de-vida/casa_06.jpeg'
       ]
     },
     {
@@ -58,9 +60,11 @@ const Trips: React.FC = () => {
       images: [
         '/images/curadas/brigada-medica-comunitaria/brigada_01.jpeg',
         '/images/curadas/brigada-medica-comunitaria/brigada_03.jpeg',
-        '/images/curadas/brigada-medica-comunitaria/brigada_05.jpeg',
-        '/images/curadas/brigada-medica-comunitaria/brigada_07.jpeg',
+        '/images/curadas/brigada-medica-comunitaria/brigada_04.jpeg',
+        '/images/curadas/brigada-medica-comunitaria/brigada_06.jpeg',
+        '/images/curadas/brigada-medica-comunitaria/brigada_08.jpeg',
         '/images/curadas/brigada-medica-comunitaria/brigada_10.jpeg',
+        '/images/curadas/brigada-medica-comunitaria/brigada_12.jpeg',
         '/images/curadas/brigada-medica-comunitaria/brigada_13.jpeg',
         '/images/curadas/brigada-medica-comunitaria/brigada_18.jpeg'
       ]
@@ -81,12 +85,13 @@ const Trips: React.FC = () => {
       icon: <HeartHandshake className="h-6 w-6 text-blue-600" />,
       images: [
         '/images/curadas/misiones-fogatas-pinatas/mision_02.jpeg',
-        '/images/curadas/misiones-fogatas-pinatas/mision_05.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_03.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_04.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_06.jpeg',
         '/images/curadas/misiones-fogatas-pinatas/mision_08.jpeg',
         '/images/curadas/misiones-fogatas-pinatas/mision_11.jpeg',
         '/images/curadas/misiones-fogatas-pinatas/mision_16.jpeg',
         '/images/curadas/misiones-fogatas-pinatas/mision_17.jpeg',
-        '/images/curadas/misiones-fogatas-pinatas/mision_21.jpeg',
         '/images/curadas/misiones-fogatas-pinatas/mision_22.jpeg',
         '/images/curadas/misiones-fogatas-pinatas/mision_27.jpeg',
         '/images/curadas/misiones-fogatas-pinatas/mision_30.jpeg'
@@ -97,14 +102,14 @@ const Trips: React.FC = () => {
       key: 'fogatas',
       icon: <PartyPopper className="h-6 w-6 text-blue-600" />,
       images: [
-        '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.39.42 PM.jpeg',
-        '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.39.47 PM (1).jpeg',
-        '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.39.48 PM.jpeg',
-        '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.41.29 PM.jpeg',
-        '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.41.30 PM (5).jpeg',
-        '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.41.31 PM (1).jpeg',
-        '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.41.32 PM (2).jpeg',
-        '/images/Fogatas/WhatsApp Image 2026-03-21 at 2.41.33 PM.jpeg'
+        '/images/curadas/misiones-fogatas-pinatas/mision_01.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_07.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_09.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_10.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_12.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_14.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_15.jpeg',
+        '/images/curadas/misiones-fogatas-pinatas/mision_31.jpeg'
       ]
     },
     {
@@ -134,14 +139,24 @@ const Trips: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {activities.map((activity) => (
             <div key={activity.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200">
-              <div className="aspect-video overflow-hidden">
+              <button
+                type="button"
+                className="aspect-video w-full overflow-hidden border-0 bg-transparent p-0 cursor-zoom-in"
+                onClick={() =>
+                  setPreviewImage({
+                    src: activity.images[0],
+                    alt: t(`trips.cards.${activity.key}.title`),
+                  })
+                }
+                aria-label={`${t(`trips.cards.${activity.key}.title`)} — ${t('media.openEnlarged')}`}
+              >
                 <img
                   src={activity.images[0]}
-                  alt={t(`trips.cards.${activity.key}.title`)}
-                  className="h-full w-full object-cover cursor-zoom-in"
+                  alt=""
+                  className="pointer-events-none h-full w-full object-cover"
                   loading="lazy"
                 />
-              </div>
+              </button>
 
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
@@ -157,14 +172,26 @@ const Trips: React.FC = () => {
 
                 <div className="grid grid-cols-3 gap-2">
                   {activity.images.slice(1, 4).map((image, index) => (
-                    <img
+                    <button
                       key={index}
-                      src={image}
-                      alt={`${t(`trips.cards.${activity.key}.title`)} ${index + 2}`}
-                      className="h-20 w-full rounded-md object-cover cursor-zoom-in"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                      type="button"
+                      className="h-20 w-full overflow-hidden rounded-md border-0 bg-transparent p-0 cursor-zoom-in"
+                      onClick={() =>
+                        setPreviewImage({
+                          src: image,
+                          alt: `${t(`trips.cards.${activity.key}.title`)} ${index + 2}`,
+                        })
+                      }
+                      aria-label={`${t(`trips.cards.${activity.key}.title`)} ${index + 2} — ${t('media.openEnlarged')}`}
+                    >
+                      <img
+                        src={image}
+                        alt=""
+                        className="pointer-events-none h-full w-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
                   ))}
                 </div>
 
@@ -180,14 +207,26 @@ const Trips: React.FC = () => {
                     {expandedCards[activity.id] && (
                       <div className="mt-3 grid grid-cols-3 gap-2">
                         {activity.images.slice(4).map((image, index) => (
-                          <img
+                          <button
                             key={`${activity.id}-${index}`}
-                            src={image}
-                            alt={`${t(`trips.cards.${activity.key}.title`)} ${index + 5}`}
-                            className="h-20 w-full rounded-md object-cover cursor-zoom-in"
-                            loading="lazy"
-                            decoding="async"
-                          />
+                            type="button"
+                            className="h-20 w-full overflow-hidden rounded-md border-0 bg-transparent p-0 cursor-zoom-in"
+                            onClick={() =>
+                              setPreviewImage({
+                                src: image,
+                                alt: `${t(`trips.cards.${activity.key}.title`)} ${index + 5}`,
+                              })
+                            }
+                            aria-label={`${t(`trips.cards.${activity.key}.title`)} ${index + 5} — ${t('media.openEnlarged')}`}
+                          >
+                            <img
+                              src={image}
+                              alt=""
+                              className="pointer-events-none h-full w-full object-cover"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </button>
                         ))}
                       </div>
                     )}
@@ -198,6 +237,13 @@ const Trips: React.FC = () => {
           ))}
         </div>
       </div>
+
+      <ImageLightbox
+        src={previewImage?.src ?? null}
+        alt={previewImage?.alt ?? ''}
+        onClose={() => setPreviewImage(null)}
+        closeLabel={t('media.closePreview')}
+      />
     </section>
   );
 };
