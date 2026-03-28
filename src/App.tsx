@@ -5,7 +5,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Trips from './components/Trips';
-import MediaCenter from './components/MediaCenter';
 import Ministries from './components/Ministries';
 import Donations from './components/Donations';
 import Contact from './components/Contact';
@@ -49,7 +48,6 @@ const HomePage: React.FC = () => {
       <Hero />
       <History />
       <Trips />
-      <MediaCenter />
       <Projects />
       <Ministries />
       <Donations />
