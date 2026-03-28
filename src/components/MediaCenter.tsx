@@ -28,7 +28,6 @@ const MediaCenter = () => {
   const [activeSection, setActiveSection] = React.useState<string>('templo');
   const [imageLimitBySection, setImageLimitBySection] = React.useState<Record<string, number>>({});
   const [videoLimitBySection, setVideoLimitBySection] = React.useState<Record<string, number>>({});
-  const [previewImage, setPreviewImage] = React.useState<{ src: string; alt: string } | null>(null);
 
   React.useEffect(() => {
     const loadManifest = async () => {
@@ -133,12 +132,6 @@ const MediaCenter = () => {
                 key={`${effectiveSection}-img-${index}`}
                 type="button"
                 className="h-44 w-full overflow-hidden rounded-lg border border-gray-200 bg-transparent p-0 transition-transform duration-300 hover:scale-105 cursor-zoom-in"
-                onClick={() =>
-                  setPreviewImage({
-                    src,
-                    alt: `${getSectionTitle(effectiveSection)} ${index + 1}`,
-                  })
-                }
                 aria-label={`${getSectionTitle(effectiveSection)} ${index + 1} — ${t('media.openEnlarged')}`}
               >
                 <img

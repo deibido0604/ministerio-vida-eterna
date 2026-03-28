@@ -48,7 +48,6 @@ const Hero: React.FC = () => {
     const { t } = useLanguage();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
-    const [previewImage, setPreviewImage] = useState<string | null>(null);
     const [carouselImages, setCarouselImages] = useState<string[]>([]);
 
     useEffect(() => {
@@ -135,7 +134,6 @@ const Hero: React.FC = () => {
                                         src={carouselImages[currentSlide]}
                                         alt={`${t('hero.title')} ${currentSlide + 1}`}
                                         className="w-full h-full object-cover cursor-zoom-in"
-                                        onClick={() => setPreviewImage(carouselImages[currentSlide])}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
 

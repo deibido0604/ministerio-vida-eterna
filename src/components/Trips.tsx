@@ -5,7 +5,6 @@ import { HeartHandshake, Home, Landmark, Stethoscope, BookOpen, PartyPopper, Han
 const Trips: React.FC = () => {
   const { t, language } = useLanguage();
   const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>({});
-  const [previewImage, setPreviewImage] = useState<{ src: string; alt: string } | null>(null);
 
   const toggleExpanded = (id: number) => {
     setExpandedCards((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -141,12 +140,6 @@ const Trips: React.FC = () => {
               <button
                 type="button"
                 className="aspect-video w-full overflow-hidden border-0 bg-transparent p-0 cursor-zoom-in"
-                onClick={() =>
-                  setPreviewImage({
-                    src: activity.images[0],
-                    alt: t(`trips.cards.${activity.key}.title`),
-                  })
-                }
                 aria-label={`${t(`trips.cards.${activity.key}.title`)} — ${t('media.openEnlarged')}`}
               >
                 <img
@@ -175,12 +168,6 @@ const Trips: React.FC = () => {
                       key={index}
                       type="button"
                       className="h-20 w-full overflow-hidden rounded-md border-0 bg-transparent p-0 cursor-zoom-in"
-                      onClick={() =>
-                        setPreviewImage({
-                          src: image,
-                          alt: `${t(`trips.cards.${activity.key}.title`)} ${index + 2}`,
-                        })
-                      }
                       aria-label={`${t(`trips.cards.${activity.key}.title`)} ${index + 2} — ${t('media.openEnlarged')}`}
                     >
                       <img
@@ -210,12 +197,6 @@ const Trips: React.FC = () => {
                             key={`${activity.id}-${index}`}
                             type="button"
                             className="h-20 w-full overflow-hidden rounded-md border-0 bg-transparent p-0 cursor-zoom-in"
-                            onClick={() =>
-                              setPreviewImage({
-                                src: image,
-                                alt: `${t(`trips.cards.${activity.key}.title`)} ${index + 5}`,
-                              })
-                            }
                             aria-label={`${t(`trips.cards.${activity.key}.title`)} ${index + 5} — ${t('media.openEnlarged')}`}
                           >
                             <img
