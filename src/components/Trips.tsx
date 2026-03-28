@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from 'context/LanguageContext';
 import { HeartHandshake, Home, Landmark, Stethoscope, BookOpen, PartyPopper, Hand, Church } from 'lucide-react';
-import ImageLightbox from 'components/ImageLightbox';
 
 const Trips: React.FC = () => {
   const { t, language } = useLanguage();
@@ -237,13 +236,6 @@ const Trips: React.FC = () => {
           ))}
         </div>
       </div>
-
-      <ImageLightbox
-        src={previewImage?.src ?? null}
-        alt={previewImage?.alt ?? ''}
-        onClose={() => setPreviewImage(null)}
-        closeLabel={t('media.closePreview')}
-      />
     </section>
   );
 };

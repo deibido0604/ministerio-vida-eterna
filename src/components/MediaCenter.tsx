@@ -1,7 +1,6 @@
 import React from 'react';
 import { PlayCircle, Image as ImageIcon } from 'lucide-react';
 import { useLanguage } from 'context/LanguageContext';
-import ImageLightbox from 'components/ImageLightbox';
 
 type MediaSection = {
   titleEs: string;
@@ -197,13 +196,6 @@ const MediaCenter = () => {
           </div>
         )}
       </div>
-
-      <ImageLightbox
-        src={previewImage?.src ?? null}
-        alt={previewImage?.alt ?? ''}
-        onClose={() => setPreviewImage(null)}
-        closeLabel={t('media.closePreview')}
-      />
     </section>
   );
 };

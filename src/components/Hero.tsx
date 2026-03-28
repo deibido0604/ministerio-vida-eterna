@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import ImageLightbox from './ImageLightbox';
 
 const CAROUSEL_IMAGE_CANDIDATES = [
     '/images/curadas/culto-iglesia/culto_03.jpeg',
@@ -249,13 +248,6 @@ const Hero: React.FC = () => {
                     </button>
                 </div>
             </div>
-
-            <ImageLightbox
-                src={previewImage}
-                alt={t('hero.title')}
-                onClose={() => setPreviewImage(null)}
-                closeLabel={t('media.closePreview')}
-            />
         </section>
     );
 };
