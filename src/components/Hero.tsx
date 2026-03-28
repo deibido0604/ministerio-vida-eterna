@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import ImageModal from './ImageModal/ImageModal';
 
 const CAROUSEL_IMAGE_CANDIDATES = [
     '/images/curadas/culto-iglesia/culto_03.jpeg',
@@ -47,6 +48,7 @@ const Hero: React.FC = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
     const [carouselImages, setCarouselImages] = useState<string[]>([]);
+    const [modalOpen, setModalOpen] = useState(false);
 
     useEffect(() => {
         let isMounted = true;
@@ -115,12 +117,22 @@ const Hero: React.FC = () => {
         }
     };
 
+    const openModal = () => {setModalOpen(true)
+        console.log('Abriendo modal');
+    };
+    const closeModal = () => setModalOpen(false);
+    const nextModalImage = () => {
+        setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    };
+    const prevModalImage = () => {
+        setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+    };
+
     return (
         <section id="home" className="relative bg-gray-50">
             <div className="container mx-auto px-4 py-12 md:py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-                    {/* Carrusel de imágenes - Lado izquierdo */}
-                    <div 
+                    <div
                         className="relative h-72 md:h-80 lg:h-96 rounded-xl overflow-hidden shadow-xl"
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
@@ -132,11 +144,11 @@ const Hero: React.FC = () => {
                                         src={carouselImages[currentSlide]}
                                         alt={`${t('hero.title')} ${currentSlide + 1}`}
                                         className="w-full h-full object-cover cursor-zoom-in"
+                                        onClick={openModal}
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
 
-                                    {/* Texto superpuesto en la imagen */}
-                                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white pointer-events-none">
                                         <h3 className="text-xl font-bold mb-2">{t('hero.title')}</h3>
                                         <p className="text-sm opacity-90">
                                             {currentSlide + 1} / {carouselImages.length} · {t('hero.community')}
@@ -209,7 +221,7 @@ const Hero: React.FC = () => {
                                 <h3 className="font-semibold text-gray-800 mb-1">{t('hero.community')}</h3>
                                 <p className="text-sm text-gray-600">{t('hero.communityDesc')}</p>
                             </div>
-                            
+
                             <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
                                 <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-3 mx-auto lg:mx-0">
                                     <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
@@ -219,7 +231,7 @@ const Hero: React.FC = () => {
                                 <h3 className="font-semibold text-gray-800 mb-1">{t('hero.growth')}</h3>
                                 <p className="text-sm text-gray-600">{t('hero.growthDesc')}</p>
                             </div>
-                            
+
                             <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
                                 <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-3 mx-auto lg:mx-0">
                                     <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
@@ -244,6 +256,15 @@ const Hero: React.FC = () => {
                     </button>
                 </div>
             </div>
+
+            <ImageModal
+                isOpen={modalOpen}
+                images={carouselImages}
+                currentIndex={currentSlide}
+                onClose={closeModal}
+                onNext={nextModalImage}
+                onPrev={prevModalImage}
+            />
         </section>
     );
 };
