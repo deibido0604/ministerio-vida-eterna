@@ -16,17 +16,27 @@ const History: React.FC = () => {
           <p className="text-gray-600 max-w-2xl mx-auto">{t('history.subtitle')}</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="space-y-6 text-gray-600 leading-relaxed">
-              <p>{t('history.paragraph1')}</p>
-              <p>{t('history.paragraph2')}</p>
-              <p>{t('history.paragraph3')}</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+          <div className="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+            <div className="space-y-8 text-gray-700 leading-relaxed text-lg lg:text-xl text-justify">
+              <p>
+                Dios dio la visión a los misioneros <span className="font-semibold text-gray-900">Víctor Solórzano</span> y <span className="font-semibold text-gray-900">Doris Hernández</span> al fundar Ministerios Campamento Vida Eterna en Honduras.
+              </p>
+              <p>
+                Tras una visita como voluntarios con su hijo <span className="font-semibold text-gray-900">Javier</span>, vieron las necesidades hospitalarias y de pobreza extrema que se atravesaban en la región, y la bondad de Dios motivó a comenzar con niños trayendo brigadas médicas junto al mensaje transformador de Jesucristo.
+              </p>
+              <p>
+                Con ese propósito llegaron los misioneros <span className="font-semibold text-gray-900">Fernando</span> y <span className="font-semibold text-gray-900">Gleni</span>, atendiendo el llamado para darle vida a la misión y preparando un equipo juvenil de misioneros que llevará el mensaje de salvación a la siguiente generación, soñando y trabajando en el desarrollo de programas que cumplan la visión y misión que Dios nos encomendó.
+              </p>
             </div>
           </div>
 
-          <div className="bg-gray-50 p-8 rounded-xl shadow-lg">
+          <div className="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
             <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold text-blue-600 mb-3">{t('history.purpose')}</h3>
+                <p className="text-gray-700">{t('history.purposeText')}</p>
+              </div>
               <div>
                 <h3 className="text-2xl font-bold text-blue-600 mb-3">{t('history.mission')}</h3>
                 <p className="text-gray-700">{t('history.missionText')}</p>
@@ -39,6 +49,21 @@ const History: React.FC = () => {
                 <h3 className="text-2xl font-bold text-blue-600 mb-3">{t('history.values')}</h3>
                 <p className="text-gray-700">{t('history.valuesList')}</p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <div className="w-full max-w-4xl">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">Video de referencia</h3>
+            <div className="relative overflow-hidden rounded-3xl shadow-lg" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/Rf_EddAt5ak?start=1060&end=1310&rel=0&modestbranding=1"
+                title="Video de YouTube"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>

@@ -134,9 +134,9 @@ const Trips: React.FC = () => {
           <p className="text-gray-600 max-w-3xl mx-auto">{t('trips.subtitle')}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {activities.map((activity) => (
-            <div key={activity.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200">
+            <div key={activity.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-200 h-full flex flex-col">
               <button
                 type="button"
                 className="aspect-video w-full overflow-hidden border-0 bg-transparent p-0 cursor-zoom-in"
