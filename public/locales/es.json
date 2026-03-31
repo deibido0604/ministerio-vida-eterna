@@ -86,10 +86,10 @@
                 "detail": "Apoyo preventivo, orientación y servicio social a familias."
             },
             "ensayos": {
-                "title": "Ensayos Bíblicos",
+                "title": "Clases de Valores",
                 "frequency": "Formación continua",
-                "description": "Espacios de práctica y aprendizaje de contenido bíblico para grupos de servicio.",
-                "detail": "Preparación de participaciones y crecimiento en la Palabra."
+                "description": "Una vez a la semana vamos a escuelas de la zona a enseñar clases de valores junto con versículos bíblicos para enseñar a los más pequeños.",
+                "detail": "Capacitación en valores cristianos y fundamentos bíblicos para niños."
             },
             "misiones": {
                 "title": "Misiones Comunitarias",
@@ -245,7 +245,7 @@
         },
         "otherMethods": "Otras formas de donar",
         "bankTransfer": "Transferencia Bancaria",
-        "bankDetails": "Para datos bancarios actualizados, escríbenos por WhatsApp y te compartimos la información oficial.",
+        "bankDetails": "<ul class=\"list-disc list-inside space-y-2 text-sm\"><li><span class=\"font-semibold text-gray-900\">Banco:</span> <span class=\"font-semibold text-gray-900\">Ficohsa</span></li><li><span class=\"font-semibold text-gray-900\">Cuenta bancaria:</span> <span class=\"font-semibold text-gray-900\">200018296887</span></li></ul>",
         "inPerson": "En Persona",
         "inPersonDesc": "Domingos durante nuestros servicios",
         "onlineDonation": "Donar en Línea",

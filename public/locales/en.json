@@ -243,7 +243,7 @@
         },
         "otherMethods": "Other ways to donate",
         "bankTransfer": "Bank Transfer",
-        "bankDetails": "For updated bank details, message us on WhatsApp and we will share the official information.",
+        "bankDetails": "<ul class=\"list-disc list-inside space-y-2 text-sm\"><li><span class=\"font-semibold text-gray-900\">Bank:</span> <span class=\"font-semibold text-gray-900\">Ficohsa</span></li><li><span class=\"font-semibold text-gray-900\">Account number:</span> <span class=\"font-semibold text-gray-900\">200018296887</span></li></ul>",
         "inPerson": "In Person",
         "inPersonDesc": "Sundays during our services",
         "onlineDonation": "Donate Online",
