@@ -5,7 +5,6 @@ import ImageModal from './ImageModal/ImageModal';
 
 const Projects: React.FC = () => {
   const { t } = useLanguage();
-  const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>({});
   const [modalOpen, setModalOpen] = useState(false);
   const [modalImages, setModalImages] = useState<string[]>([]);
   const [modalIndex, setModalIndex] = useState(0);
@@ -172,29 +171,6 @@ const Projects: React.FC = () => {
         '/images/Proyectos/ong_3.jpeg',
         '/images/Proyectos/ong_5.jpeg'
       ]
-    }
-  ];
-
-  const churchProjects = [
-    {
-      name: t('projects.churchProjects.project1.name'),
-      description: t('projects.churchProjects.project1.description'),
-      impact: t('projects.churchProjects.project1.impact')
-    },
-    {
-      name: t('projects.churchProjects.project2.name'),
-      description: t('projects.churchProjects.project2.description'),
-      impact: t('projects.churchProjects.project2.impact')
-    },
-    {
-      name: t('projects.churchProjects.project3.name'),
-      description: t('projects.churchProjects.project3.description'),
-      impact: t('projects.churchProjects.project3.impact')
-    },
-    {
-      name: t('projects.churchProjects.project4.name'),
-      description: t('projects.churchProjects.project4.description'),
-      impact: t('projects.churchProjects.project4.impact')
     }
   ];
 
