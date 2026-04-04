@@ -79,12 +79,14 @@ const Trips: React.FC = () => {
       key: 'culto',
       icon: <Church className="h-6 w-6 text-blue-600" />,
       images: [
+        '/images/curadas/culto-iglesia/culto_12.jpeg',
+        '/images/curadas/culto-iglesia/culto_13.jpeg',
         '/images/curadas/culto-iglesia/culto_01.jpeg',
         '/images/curadas/culto-iglesia/culto_03.jpeg',
         '/images/curadas/culto-iglesia/culto_04.jpeg',
-        '/images/curadas/culto-iglesia/culto_06.jpeg',
         '/images/curadas/culto-iglesia/culto_10.jpeg',
-        '/images/curadas/culto-iglesia/culto_11.jpeg'  
+        '/images/curadas/culto-iglesia/culto_11.jpeg',
+      
       ]
     },
     {

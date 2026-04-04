@@ -66,10 +66,10 @@
                 "detail": "Ongoing work with support from church members and volunteers."
             },
             "culto": {
-                "title": "Church Worship Services",
+                "title": "Transforming Worship Services",
                 "frequency": "Weekly",
-                "description": "Worship gatherings, teaching, and prayer as a faith community.",
-                "detail": "Children, youth, and adults actively participate in each service."
+                "description": "Dynamic worship gatherings, teaching, and prayer that inspire and transform our faith community.",
+                "detail": "We vary our services with campfires and worship to actively engage and encourage youth, along with children and adults in each service."
             },
             "casas": {
                 "title": "Life Houses",
@@ -174,6 +174,26 @@
                 "Stronger community unity"
             ]
         },
+        "project7": {
+            "title": "Children's Dining Project",
+            "description": "Food will be provided to children from scarce resources and the word will be imparted to them.",
+            "urgency": "Priority program",
+            "benefits": [
+                "Nutrition for children",
+                "Biblical teaching",
+                "Spiritual development"
+            ]
+        },
+        "project8": {
+            "title": "Biblical Classes for Women",
+            "description": "Biblical classes for women with NGO support.",
+            "urgency": "Developing program",
+            "benefits": [
+                "Spiritual strengthening",
+                "Community support",
+                "Women's empowerment"
+            ]
+        },
         "churchProjects": {
             "title": "Active Ministry Fronts",
             "project1": {
@@ -256,7 +276,7 @@
         "subtitle": "We are here to serve you. Get in touch with us for any questions, prayer requests, or to visit us.",
         "infoTitle": "Contact Information",
         "address": "Address",
-        "addressValue": "San Pedro Sula, Cortés<br />Honduras",
+        "addressValue": "Siguatepeque, Comayagua, Aldea el socorro, km 125<br />Honduras",
         "phone": "Phone",
         "whatsapp": "WhatsApp",
         "whatsappChat": "Chat with us",
@@ -278,7 +298,7 @@
         "successMessage": "Thank you for contacting us. We'll reply soon.",
         "placeholderName": "Your name",
         "placeholderEmail": "you@email.com",
-        "placeholderPhone": "+504 1234-5678",
+        "placeholderPhone": "+504 9633-7658",
         "placeholderMessage": "How can we help you?"
     },
     "footer": {
@@ -288,7 +308,7 @@
         "quickLinks": "Quick Links",
         "contactInfo": "Contact Information",
         "address": "Faith Street 123, San Pedro Sula, Honduras",
-        "phone": "+504 1234-5678",
+        "phone": "+504 9633-7658",
         "email": "info@ministeriovidaeterna.org",
         "copyright": "All rights reserved.",
         "madeWith": "Made with",

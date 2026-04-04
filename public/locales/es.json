@@ -18,7 +18,7 @@
         "mainPhone": "Teléfono principal"
     },
     "hero": {
-        "title": "Ministerio Vida Eterna",
+        "title": "Ministerios Vida Eterna",
         "welcome": "Bienvenidos al",
         "description": "Somos una comunidad de fe comprometida con el crecimiento espiritual, el servicio a la comunidad y la proclamación del Evangelio. Nuestro campamento es un lugar donde las vidas son transformadas.",
         "visitUs": "Visítanos este Domingo",
@@ -176,6 +176,26 @@
                 "Comunidad más unida"
             ]
         },
+        "project7": {
+            "title": "Proyecto Comedor Infantil",
+            "description": "Se les dará alimentos a niños de escasos recursos y se les impartirá la palabra.",
+            "urgency": "Programa prioritario",
+            "benefits": [
+                "Alimentación para niños",
+                "Enseñanza bíblica",
+                "Desarrollo espiritual"
+            ]
+        },
+        "project8": {
+            "title": "Clases Bíblicas para Mujeres",
+            "description": "Clases bíblicas para mujeres con apoyo de ONG.",
+            "urgency": "Programa en desarrollo",
+            "benefits": [
+                "Fortalecimiento espiritual",
+                "Apoyo comunitario",
+                "Empoderamiento femenino"
+            ]
+        },
         "churchProjects": {
             "title": "Frentes de Trabajo Activos",
             "project1": {
@@ -258,7 +278,7 @@
         "subtitle": "Estamos aquí para servirte. Ponte en contacto con nosotros para cualquier consulta, oración o para visitarnos.",
         "infoTitle": "Información de Contacto",
         "address": "Dirección",
-        "addressValue": "San Pedro Sula, Cortés<br />Honduras",
+        "addressValue": "Siguatepeque, Comayagua, Aldea el socorro, km 125<br />Honduras",
         "phone": "Teléfonos",
         "whatsapp": "WhatsApp",
         "whatsappChat": "Chatea con nosotros",
@@ -280,7 +300,7 @@
         "successMessage": "Gracias por contactarnos. Te responderemos pronto.",
         "placeholderName": "Tu nombre",
         "placeholderEmail": "tu@email.com",
-        "placeholderPhone": "+504 1234-5678",
+        "placeholderPhone": "+504 9633-7658",
         "placeholderMessage": "¿En qué podemos ayudarte?"
     },
     "footer": {
@@ -290,7 +310,7 @@
         "quickLinks": "Enlaces rápidos",
         "contactInfo": "Información de contacto",
         "address": "Calle de la Fe 123, San Pedro Sula, Honduras",
-        "phone": "+504 1234-5678",
+        "phone": "+504 9633-7658",
         "email": "info@ministeriovidaeterna.org",
         "copyright": "Todos los derechos reservados.",
         "madeWith": "Hecho con",

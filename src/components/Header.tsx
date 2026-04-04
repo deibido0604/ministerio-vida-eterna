@@ -85,7 +85,7 @@ const Header: React.FC = () => {
             </button>
 
             <a
-              href="tel:+50412345678"
+              href="tel:+50496337658"
               className="flex items-center space-x-2 group"
             >
               <div className="bg-blue-100 p-2 rounded-full group-hover:bg-blue-200 transition-colors">
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
               </div>
               <div className="text-left">
                 <span className="text-sm text-gray-500">{t('contact.phone')}</span>
-                <p className="font-medium text-gray-700">+504 1234-5678</p>
+                <p className="font-medium text-gray-700">+504 9633-7658</p>
               </div>
             </a>
           </div>
@@ -164,7 +164,7 @@ const Header: React.FC = () => {
 
               <div className="mt-6 pt-6 border-t border-gray-200 space-y-4">
                 <a
-                  href="tel:+50412345678"
+                  href="tel:+50496337658"
                   className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm hover:shadow transition-shadow"
                   onClick={closeMobileMenu}
                 >
@@ -172,7 +172,7 @@ const Header: React.FC = () => {
                     <Phone className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-700">+504 12345678</p>
+                    <p className="font-medium text-gray-700">+504 96337658</p>
                     <p className="text-sm text-gray-500">{t('contact.phone')}</p>
                   </div>
                 </a>

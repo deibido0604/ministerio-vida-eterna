@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const whatsappNumber = "50412345678";
+  const whatsappNumber = "50496337658";
   const whatsappMessage = encodeURIComponent("Hola, me gustaría obtener más información sobre el Ministerio Vida Eterna");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="font-bold text-gray-700 text-lg">{t('contact.phone')}</h4>
                   <p className="text-gray-600">
-                    <a href="tel:+50412345678" className="hover:text-blue-600 transition-colors">+504 1234-5678</a>
+                    <a href="tel:+50496337658" className="hover:text-blue-600 transition-colors">+504 9633-7658</a>
                   </p>
                 </div>
               </div>
@@ -150,7 +150,7 @@ const Contact: React.FC = () => {
                     <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 3.24-8 5.33-8-5.33V6l8 5.33L20 6v1.24z" />
                   </svg>
                 </a>
-                <a href="tel:+50412345678" className="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-900 transition-colors">
+                <a href="tel:+50496337658" className="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-900 transition-colors">
                   <span className="sr-only">Phone</span>
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.72 11.72 0 0 0 3.68.59 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.3 21 3 13.7 3 4a1 1 0 0 1 1-1h3.27a1 1 0 0 1 1 1c0 1.27.2 2.5.59 3.68a1 1 0 0 1-.24 1.01l-2 2.1z" />

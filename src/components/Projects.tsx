@@ -1,9 +1,59 @@
-import React from 'react';
-import { Home, Heart, Building, Users, Target, Church } from 'lucide-react';
+import React, { useState } from 'react';
+import { Home, Heart, Building, Users, Target, Church, Utensils, BookOpen } from 'lucide-react';
 import { useLanguage } from 'context/LanguageContext';
+import ImageModal from './ImageModal/ImageModal';
 
 const Projects: React.FC = () => {
   const { t } = useLanguage();
+  const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>({});
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImages, setModalImages] = useState<string[]>([]);
+  const [modalIndex, setModalIndex] = useState(0);
+
+  const isVideo = (src: string) => src.toLowerCase().endsWith('.mp4');
+
+  const renderMedia = (src: string, alt: string, isThumbnail = false) => {
+    if (isVideo(src)) {
+      return (
+        <video
+          src={src}
+          className="h-full w-full object-cover"
+          muted
+          playsInline
+          loop={isThumbnail}
+          controls
+          autoPlay={isThumbnail}
+          preload="metadata"
+        />
+      );
+    }
+
+    return (
+      <img
+        src={src}
+        alt={alt}
+        className="pointer-events-none h-full w-full object-cover"
+        loading="lazy"
+        decoding="async"
+      />
+    );
+  };
+
+  const openImageModal = (images: string[], index: number) => {
+    setModalImages(images);
+    setModalIndex(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => setModalOpen(false);
+
+  const nextModalImage = () => {
+    setModalIndex((prev) => (prev + 1) % modalImages.length);
+  };
+
+  const prevModalImage = () => {
+    setModalIndex((prev) => (prev - 1 + modalImages.length) % modalImages.length);
+  };
 
   const projects = [
     {
@@ -83,6 +133,45 @@ const Projects: React.FC = () => {
       ],
       icon: <Target className="h-8 w-8" />,
       color: 'bg-green-50 text-green-700'
+    },
+    {
+      id: 7,
+      title: t('projects.project7.title'),
+      description: t('projects.project7.description'),
+      urgency: t('projects.project7.urgency'),
+      benefits: [
+        t('projects.project7.benefits[0]'),
+        t('projects.project7.benefits[1]'),
+        t('projects.project7.benefits[2]')
+      ],
+      icon: <Utensils className="h-8 w-8" />,
+      color: 'bg-indigo-50 text-indigo-700',
+      images: [
+        '/images/Proyectos/comedor_1.jpeg',
+        '/images/Proyectos/comedor_2.jpeg',
+        '/images/Proyectos/comedor_3.jpeg',
+        '/images/Proyectos/comedor_4.jpeg'
+      ]
+    },
+    {
+      id: 8,
+      title: t('projects.project8.title'),
+      description: t('projects.project8.description'),
+      urgency: t('projects.project8.urgency'),
+      benefits: [
+        t('projects.project8.benefits[0]'),
+        t('projects.project8.benefits[1]'),
+        t('projects.project8.benefits[2]')
+      ],
+      icon: <BookOpen className="h-8 w-8" />,
+      color: 'bg-pink-50 text-pink-700',
+      images: [
+        '/images/Proyectos/ong_1.jpeg',
+        '/images/Proyectos/ong_2.jpeg',
+        '/images/Proyectos/ong_4.jpeg',
+        '/images/Proyectos/ong_3.jpeg',
+        '/images/Proyectos/ong_5.jpeg'
+      ]
     }
   ];
 
@@ -158,6 +247,33 @@ const Projects: React.FC = () => {
                       ))}
                     </ul>
                   </div>
+
+                  {project.images && project.images.length > 0 && (
+                    <div className="mt-4">
+                      <div className="grid grid-cols-3 gap-2">
+                        {project.images.slice(0, 3).map((image, index) => {
+                          const imageIndex = project.images.indexOf(image);
+                          const thumbnailAriaLabel = project.title + ' ' + (index + 1) + ' — ' + t('media.openEnlarged');
+                          const thumbnailAlt = project.title + ' ' + (index + 1);
+                          return (
+                            <button
+                              key={index}
+                              type="button"
+                              className="h-20 w-full overflow-hidden rounded-md border-0 bg-transparent p-0 cursor-zoom-in"
+                              onClick={() => {
+                                if (imageIndex >= 0) {
+                                  openImageModal(project.images, imageIndex);
+                                }
+                              }}
+                              aria-label={thumbnailAriaLabel}
+                            >
+                              {renderMedia(image, thumbnailAlt, true)}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="p-6 pt-0">
@@ -172,37 +288,15 @@ const Projects: React.FC = () => {
             ))}
           </div>
         </div>
-
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">{t('projects.churchProjects.title')}</h3>
-          <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 border border-gray-200">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {churchProjects.map((project, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:border-blue-300 transition-colors">
-                  <div className="flex items-start mb-4">
-                    <div className="p-2 bg-blue-100 rounded-lg mr-4">
-                      <Church className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-gray-800 mb-1">{project.name}</h4>
-                      <p className="text-gray-600 text-sm mb-2">{project.description}</p>
-                      <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
-                        {project.impact}
-                      </span>
-                    </div>
-                  </div>
-                  <button 
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="text-blue-600 hover:text-blue-800 font-medium text-sm"
-                  >
-                    {t('projects.moreInfo')}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
+      <ImageModal
+        isOpen={modalOpen}
+        images={modalImages}
+        currentIndex={modalIndex}
+        onClose={closeModal}
+        onNext={nextModalImage}
+        onPrev={prevModalImage}
+      />
     </section>
   );
 };

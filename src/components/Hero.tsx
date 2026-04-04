@@ -40,7 +40,8 @@ const CAROUSEL_IMAGE_CANDIDATES = [
     '/images/Actividades/WhatsApp Image 2026-03-21 at 2.37.04 PM (2).jpeg',
     '/images/Actividades/WhatsApp Image 2026-03-21 at 2.37.05 PM (1).jpeg',
     '/images/Actividades/WhatsApp Image 2026-03-21 at 2.37.05 PM (2).jpeg',
-    '/images/Actividades/WhatsApp Image 2026-03-21 at 2.37.05 PM (5).jpeg'
+    '/images/Actividades/WhatsApp Image 2026-03-21 at 2.37.05 PM (5).jpeg',
+    '/images/Actividades/WhatsApp Image 2026-03-21 at 2.38.05 PM.jpeg',
 ];
 
 const Hero: React.FC = () => {

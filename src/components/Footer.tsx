@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-gray-400" />
-                <a href="tel:+50412345678" className="text-gray-400 hover:text-white transition-colors">{t('footer.phone')}</a>
+                <a href="tel:+50496337658" className="text-gray-400 hover:text-white transition-colors">{t('footer.phone')}</a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-gray-400" />
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Redes Sociales</h4>
             <div className="flex space-x-4">
-              <a href="https://wa.me/50412345678" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-green-600 transition-colors">
+              <a href="https://wa.me/50496337658" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-green-600 transition-colors">
                 <MessageCircle className="h-5 w-5" />
               </a>
               <a href="mailto:info@ministeriovidaeterna.org" className="bg-gray-800 p-2 rounded-full hover:bg-blue-600 transition-colors">
