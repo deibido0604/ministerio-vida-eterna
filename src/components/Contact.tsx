@@ -112,12 +112,30 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-700 text-lg">{t('contact.schedule')}</h4>
-                  <div className="text-gray-600">
-                    <p className="font-semibold">{t('contact.sunday')}</p>
-                    <p>{t('contact.sundayMorning')}</p>
-                    <p>{t('contact.sundaySchool')}</p>
-                    <p className="font-semibold mt-2">{t('contact.wednesday')}</p>
-                    <p>{t('contact.wednesdayBible')}</p>
+                  <div className="text-gray-600 space-y-2">
+                    <div>
+                      <p className="font-semibold">Domingo</p>
+                      <p>Cultos 4:30 pm</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">Martes</p>
+                      <p>Clases de valores en escuela 8:00 am</p>
+                      <p>Discipulado de mujeres 2:00 pm</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">Miércoles</p>
+                      <p>Casas de Vida 5:30 pm</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">Viernes</p>
+                      <p>Discipulado caballeros 4:30 pm</p>
+                      <p>Clases de música 7:00 pm</p>
+                      <p>Altares de Vida</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">Sábado</p>
+                      <p>Campavida juvenil 4:00 pm</p>
+                    </div>
                   </div>
                 </div>
               </div>

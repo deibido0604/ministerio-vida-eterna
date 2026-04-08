@@ -29,6 +29,13 @@ const History: React.FC = () => {
                 Con ese propósito llegaron los misioneros <span className="font-semibold text-gray-900">Fernando</span> y <span className="font-semibold text-gray-900">Gleni</span>, atendiendo el llamado para darle vida a la misión y preparando un equipo juvenil de misioneros que llevará el mensaje de salvación a la siguiente generación, soñando y trabajando en el desarrollo de programas que cumplan la visión y misión que Dios nos encomendó.
               </p>
             </div>
+            <div className="mt-8 flex justify-center">
+              <img
+                src="/images/Actividades/WhatsApp%20Image%202026-03-21%20at%202.38.05%20PM.jpeg"
+                alt="Equipo de ministerio"
+                className="w-full max-w-xs rounded-3xl border border-gray-200 shadow-sm opacity-80"
+              />
+            </div>
           </div>
 
           <div className="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
