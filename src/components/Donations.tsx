@@ -5,25 +5,11 @@ import { useLanguage } from 'context/LanguageContext';
 
 const Donations: React.FC = () => {
   const { t } = useLanguage();
-  const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
+  const [amount, setAmount] = useState('10');
+  const [customAmount, setCustomAmount] = useState('');
 
-  const createOrder = (data: any, actions: any) => {
-    const amount = selectedAmount || 10;
-    return actions.order.create({
-      purchase_units: [{
-        amount: {
-          value: amount.toString(),
-        },
-        description: "Donation for Eternal Life Ministry",
-      }],
-    });
-  };
-
-  const onApprove = (data: any, actions: any) => {
-    return actions.order.capture().then((details: any) => {
-      alert(`Thank you for your donation, ${details.payer.name.given_name}!`);
-    });
-  };
+  const donationAmount = customAmount.trim() !== '' ? customAmount : amount;
+  const isValidAmount = Number(donationAmount) > 0;
 
   return (
     <section id="donations" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
@@ -76,35 +62,64 @@ const Donations: React.FC = () => {
           <div className="bg-white p-8 rounded-xl shadow-xl">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('donations.onlineDonation')}</h3>
             
-            <div className="mb-8">
-              <p className="text-gray-600 mb-4">{t('donations.selectAmount')}</p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-                {[10, 25, 50, 100].map((amount) => (
+            <div className="space-y-4">
+              <p className="text-gray-700 mb-2">{t('donations.selectAmount')}</p>
+
+              <div className="grid grid-cols-3 gap-3 mb-4">
+                {['10', '25', '50'].map((value) => (
                   <button
-                    key={amount}
-                    className={`p-3 border-2 rounded-lg font-bold transition-colors ${
-                      selectedAmount === amount
-                        ? 'bg-yellow-600 border-yellow-600 text-white'
-                        : 'border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white'
-                    }`}
-                    onClick={() => setSelectedAmount(amount)}
+                    key={value}
+                    type="button"
+                    onClick={() => {
+                      setAmount(value);
+                      setCustomAmount('');
+                    }}
+                    className={`rounded-xl border px-4 py-3 text-sm font-semibold transition ${amount === value && customAmount === '' ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-blue-400 hover:bg-blue-50'}`}
                   >
-                    ${amount} USD
+                    ${value}
                   </button>
                 ))}
               </div>
-            </div>
 
-            <div className="space-y-4">
-              <p className="text-gray-700 mb-2">{t('donations.customAmount')}</p>
-              
+              <div>
+                <label htmlFor="custom-amount" className="block text-sm font-medium text-gray-700 mb-2">
+                  {t('donations.customAmount')}
+                </label>
+                <input
+                  id="custom-amount"
+                  type="number"
+                  min="1"
+                  step="0.01"
+                  value={customAmount}
+                  onChange={(event) => setCustomAmount(event.target.value)}
+                  placeholder="10.00"
+                  className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-gray-800 shadow-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                />
+              </div>
+
               <div className="mb-6">
                 <PayPalButtons
-                  createOrder={createOrder}
-                  onApprove={onApprove}
-                  style={{
-                    layout: 'vertical',
-                    shape: 'rect',
+                  style={{ layout: 'vertical', color: 'gold', shape: 'rect', label: 'donate' }}
+                  forceReRender={[donationAmount]}
+                  disabled={!isValidAmount}
+                  createOrder={(data, actions) => {
+                    return actions.order.create({
+                      intent: 'CAPTURE',
+                      purchase_units: [
+                        {
+                          amount: {
+                            value: isValidAmount ? donationAmount : '1',
+                            currency_code: 'USD',
+                          },
+                        },
+                      ],
+                    });
+                  }}
+                  onApprove={async (data, actions) => {
+                    if (actions.order) {
+                      const details = await actions.order.capture();
+                      console.log('Donation completed:', details);
+                    }
                   }}
                 />
               </div>
