@@ -13,7 +13,7 @@ const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const whatsappNumber = "50496337658";
-  const whatsappMessage = encodeURIComponent("Hola, me gustaría obtener más información sobre el Ministerio Vida Eterna");
+  const whatsappMessage = encodeURIComponent("Hola, me gustaría obtener más información sobre el Campamento Ministerios de Vida Eterna");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
