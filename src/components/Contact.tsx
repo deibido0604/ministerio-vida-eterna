@@ -11,31 +11,93 @@ const Contact: React.FC = () => {
     message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<{[key: string]: string}>({});
 
   const whatsappNumber = "50496337658";
   const whatsappMessage = encodeURIComponent("Hola, me gustaría obtener más información sobre el Campamento Ministerios de Vida Eterna");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const validateForm = () => {
+    const errors: {[key: string]: string} = {};
+
+    if (!formData.name.trim()) {
+      errors.name = 'El nombre es requerido';
+    }
+
+    if (!formData.email.trim()) {
+      errors.email = 'El email es requerido';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = 'El email no es válido';
+    }
+
+    if (!formData.message.trim()) {
+      errors.message = 'El mensaje es requerido';
+    }
+
+    setFieldErrors(errors);
+    return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+
+    // Limpiar error del campo cuando el usuario empiece a escribir
+    if (fieldErrors[name]) {
+      setFieldErrors({
+        ...fieldErrors,
+        [name]: '',
+      });
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Formulario enviado:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
+    setError('');
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      // Simular envío (reemplaza con tu lógica real)
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          // Simular error aleatorio para testing
+          if (Math.random() > 0.8) {
+            reject(new Error('Error de conexión. Inténtalo de nuevo.'));
+          } else {
+            resolve('Mensaje enviado exitosamente');
+          }
+        }, 2000);
+      });
+
+      console.log('Formulario enviado:', formData);
+      setIsSubmitted(true);
       setFormData({
         name: '',
         email: '',
         phone: '',
         message: '',
       });
-    }, 3000);
+      setFieldErrors({});
+
+      // Ocultar mensaje de éxito después de 3 segundos
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 3000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Ocurrió un error inesperado');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -190,6 +252,12 @@ const Contact: React.FC = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
+                  {error && (
+                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <p className="text-red-600 text-sm">{error}</p>
+                    </div>
+                  )}
+
                   <div className="space-y-6">
                     <div>
                       <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
@@ -202,9 +270,14 @@ const Contact: React.FC = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition ${
+                          fieldErrors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                        }`}
                         placeholder={t('contact.placeholderName')}
                       />
+                      {fieldErrors.name && (
+                        <p className="text-red-500 text-sm mt-1">{fieldErrors.name}</p>
+                      )}
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -219,9 +292,14 @@ const Contact: React.FC = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition ${
+                            fieldErrors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                          }`}
                           placeholder={t('contact.placeholderEmail')}
                         />
+                        {fieldErrors.email && (
+                          <p className="text-red-500 text-sm mt-1">{fieldErrors.email}</p>
+                        )}
                       </div>
 
                       <div>
@@ -251,17 +329,32 @@ const Contact: React.FC = () => {
                         onChange={handleChange}
                         required
                         rows={4}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition ${
+                          fieldErrors.message ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                        }`}
                         placeholder={t('contact.placeholderMessage')}
                       />
+                      {fieldErrors.message && (
+                        <p className="text-red-500 text-sm mt-1">{fieldErrors.message}</p>
+                      )}
                     </div>
 
                     <button
                       type="submit"
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
+                      disabled={isLoading}
+                      className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
                     >
-                      <span>{t('contact.send')}</span>
-                      <Send className="h-5 w-5" />
+                      {isLoading ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                          <span>Enviando...</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>{t('contact.send')}</span>
+                          <Send className="h-5 w-5" />
+                        </>
+                      )}
                     </button>
                   </div>
                 </form>

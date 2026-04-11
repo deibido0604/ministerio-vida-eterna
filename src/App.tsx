@@ -11,6 +11,12 @@ import Contact from './components/Contact';
 import History from 'components/History';
 import Projects from 'components/Projects';
 
+declare const process: {
+  env: {
+    REACT_APP_PAYPAL_CLIENT_ID?: string;
+  };
+};
+
 interface ScrollToHashProps {}
 
 const ScrollToHash: React.FC<ScrollToHashProps> = () => {
@@ -57,10 +63,14 @@ const HomePage: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  const clientId = (process as any).env?.REACT_APP_PAYPAL_CLIENT_ID || 'test';
   const paypalOptions = {
-    clientId: process.env.REACT_APP_PAYPAL_CLIENT_ID || "test",
-    currency: "USD",
-    intent: "capture",
+    clientId,
+    currency: 'USD',
+    intent: 'capture',
+    'enable-funding': 'paypal,card',
+    'disable-funding': 'venmo,paylater',
+    locale: 'es_HN',
   };
 
   return (

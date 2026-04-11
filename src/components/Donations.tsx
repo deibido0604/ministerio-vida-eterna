@@ -1,15 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { PayPalButtons } from '@paypal/react-paypal-js';
 import { Heart, Shield, Gift } from 'lucide-react';
 import { useLanguage } from 'context/LanguageContext';
 
 const Donations: React.FC = () => {
   const { t } = useLanguage();
-  const [amount, setAmount] = useState('10');
-  const [customAmount, setCustomAmount] = useState('');
+  const donationAmount = '1';
+  const isValidAmount = true;
+  const [paypalLoaded, setPaypalLoaded] = React.useState(false);
 
-  const donationAmount = customAmount.trim() !== '' ? customAmount : amount;
-  const isValidAmount = Number(donationAmount) > 0;
+  useEffect(() => {
+    // Verificar si PayPal SDK está cargado
+    const checkPayPal = () => {
+      const paypalWindow = (window as any).paypal;
+      if (paypalWindow && !paypalLoaded) {
+        console.log('PayPal SDK loaded successfully');
+        setPaypalLoaded(true);
+      } else if (!paypalWindow && paypalLoaded) {
+        console.log('PayPal SDK unloaded');
+        setPaypalLoaded(false);
+      }
+    };
+
+    checkPayPal();
+    const interval = setInterval(checkPayPal, 1000);
+
+    return () => clearInterval(interval);
+  }, [paypalLoaded]);
 
   return (
     <section id="donations" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
@@ -63,65 +80,111 @@ const Donations: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('donations.onlineDonation')}</h3>
             
             <div className="space-y-4">
-              <p className="text-gray-700 mb-2">{t('donations.selectAmount')}</p>
-
-              <div className="grid grid-cols-3 gap-3 mb-4">
-                {['10', '25', '50'].map((value) => (
-                  <button
-                    key={value}
-                    type="button"
-                    onClick={() => {
-                      setAmount(value);
-                      setCustomAmount('');
-                    }}
-                    className={`rounded-xl border px-4 py-3 text-sm font-semibold transition ${amount === value && customAmount === '' ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-blue-400 hover:bg-blue-50'}`}
-                  >
-                    ${value}
-                  </button>
-                ))}
+              <div className="flex items-center justify-between">
+                <p className="text-gray-700 mb-2">{t('donations.onlineDonation')}</p>
+                <div className="flex items-center text-sm">
+                  <div className={`w-2 h-2 rounded-full mr-2 ${paypalLoaded ? 'bg-green-500' : 'bg-yellow-500'}`}></div>
+                  <span className={paypalLoaded ? 'text-green-600' : 'text-yellow-600'}>
+                    {paypalLoaded ? 'PayPal listo' : 'Cargando PayPal...'}
+                  </span>
+                </div>
               </div>
 
-              <div>
-                <label htmlFor="custom-amount" className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('donations.customAmount')}
-                </label>
-                <input
-                  id="custom-amount"
-                  type="number"
-                  min="1"
-                  step="0.01"
-                  value={customAmount}
-                  onChange={(event) => setCustomAmount(event.target.value)}
-                  placeholder="10.00"
-                  className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-gray-800 shadow-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-                />
-              </div>
+              <div className="grid grid-cols-1 gap-4">
+                <div className="rounded-xl border border-gray-200 p-4">
+                  <p className="text-lg font-semibold text-gray-800 mb-3">PayPal</p>
+                  {!paypalLoaded ? (
+                    <div className="space-y-3">
+                      <div className="text-center py-4">
+                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-2"></div>
+                        <p className="text-gray-600 text-sm">Cargando PayPal...</p>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-sm text-gray-600 mb-2">O dona directamente:</p>
+                        <a
+                          href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                        >
+                          Donar con PayPal
+                        </a>
+                      </div>
+                    </div>
+                  ) : (
+                    <PayPalButtons
+                      fundingSource="paypal"
+                      style={{ layout: 'vertical', color: 'blue', shape: 'rect', label: 'paypal' }}
+                      forceReRender={[donationAmount]}
+                      disabled={!isValidAmount}
+                      createOrder={(data, actions) => {
+                        return actions.order.create({
+                          intent: 'CAPTURE',
+                          purchase_units: [
+                            {
+                              amount: {
+                                value: donationAmount,
+                                currency_code: 'USD',
+                              },
+                            },
+                          ],
+                        });
+                      }}
+                      onApprove={async (data, actions) => {
+                        if (actions.order) {
+                          const details = await actions.order.capture();
+                          console.log('Donation completed:', details);
+                          alert('¡Gracias por tu donación! Tu contribución ha sido procesada exitosamente.');
+                        }
+                      }}
+                      onError={(err) => {
+                        console.error('PayPal error:', err);
+                        alert('Hubo un error procesando tu donación. Por favor, intenta de nuevo.');
+                      }}
+                    />
+                  )}
+                </div>
 
-              <div className="mb-6">
-                <PayPalButtons
-                  style={{ layout: 'vertical', color: 'gold', shape: 'rect', label: 'donate' }}
-                  forceReRender={[donationAmount]}
-                  disabled={!isValidAmount}
-                  createOrder={(data, actions) => {
-                    return actions.order.create({
-                      intent: 'CAPTURE',
-                      purchase_units: [
-                        {
-                          amount: {
-                            value: isValidAmount ? donationAmount : '1',
-                            currency_code: 'USD',
-                          },
-                        },
-                      ],
-                    });
-                  }}
-                  onApprove={async (data, actions) => {
-                    if (actions.order) {
-                      const details = await actions.order.capture();
-                      console.log('Donation completed:', details);
-                    }
-                  }}
-                />
+                <div className="rounded-xl border border-gray-200 p-4">
+                  <p className="text-lg font-semibold text-gray-800 mb-3">Tarjeta de crédito</p>
+                  {!paypalLoaded ? (
+                    <div className="text-center py-4">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-800 mx-auto mb-2"></div>
+                      <p className="text-gray-600 text-sm">Cargando PayPal...</p>
+                    </div>
+                  ) : (
+                    <PayPalButtons
+                      fundingSource="card"
+                      style={{ layout: 'vertical', color: 'black', shape: 'rect', label: 'checkout' }}
+                      forceReRender={[donationAmount]}
+                      disabled={!isValidAmount}
+                      createOrder={(data, actions) => {
+                        return actions.order.create({
+                          intent: 'CAPTURE',
+                          purchase_units: [
+                            {
+                              amount: {
+                                value: donationAmount,
+                                currency_code: 'USD',
+                              },
+                            },
+                          ],
+                        });
+                      }}
+                      onApprove={async (data, actions) => {
+                        if (actions.order) {
+                          const details = await actions.order.capture();
+                          console.log('Donation completed:', details);
+                          alert('¡Gracias por tu donación! Tu contribución ha sido procesada exitosamente.');
+                        }
+                      }}
+                      onError={(err) => {
+                        console.error('PayPal error:', err);
+                        alert('Hubo un error procesando tu donación. Por favor, intenta de nuevo.');
+                      }}
+                    />
+                  )}
+                </div>
               </div>
 
               <div className="text-sm text-gray-500 bg-blue-50 p-4 rounded-lg">
