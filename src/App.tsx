@@ -63,14 +63,11 @@ const HomePage: React.FC = () => {
 };
 
 const App: React.FC = () => {
-  const clientId = (process as any).env?.REACT_APP_PAYPAL_CLIENT_ID || 'sb';
+  const clientId = "AYPvlPM3pFY86JZQOGkLCsvd49DsP7CwTXjdaeUqbPtrRRZqw6D96H5IDndpKP1yY5muToB_bY5RWPpu";
   const paypalOptions = {
     clientId,
     currency: 'USD',
     intent: 'capture',
-    commit: true,
-    components: 'paypal-payments,card-fields',
-    pageType: 'checkout',
     'enable-funding': 'paypal,card',
     'disable-funding': 'venmo,paylater',
     locale: 'es_HN',
