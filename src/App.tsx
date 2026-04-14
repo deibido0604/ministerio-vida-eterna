@@ -1,3 +1,4 @@
+// App.tsx
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
@@ -13,49 +14,48 @@ import Projects from 'components/Projects';
 
 const ScrollToHash: React.FC = () => {
   const location = useLocation();
-
   useEffect(() => {
-    const handleHashScroll = () => {
-      if (location.hash) {
-        const id = location.hash.replace('#', '');
-        const element = document.getElementById(id);
-        if (element) {
-          requestAnimationFrame(() => {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          });
-        }
-      } else {
-        window.scrollTo(0, 0);
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        requestAnimationFrame(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
       }
-    };
-    handleHashScroll();
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, [location]);
-
   return null;
 };
 
-const HomePage: React.FC = () => {
-  return (
-    <>
-      <Header />
-      <Hero />
-      <History />
-      <Trips />
-      <Projects />
-      <Ministries />
-      <Donations />
-      <Contact />
-    </>
-  );
-};
+const HomePage: React.FC = () => (
+  <>
+    <Header />
+    <Hero />
+    <History />
+    <Trips />
+    <Projects />
+    <Ministries />
+    <Donations />
+    <Contact />
+  </>
+);
 
 const App: React.FC = () => {
-  const clientId = "AYPvlPM3pFY86JZQOGkLCsvd49DsP7CwTXjdaeUqbPtrRRZqw6D96H5IDndpKP1yY5muToB_bY5RWPpu";
+  // **IMPORTANTE:** Prueba primero con 'sb' (sandbox público)
+  // Si funciona, cambia a tu clientId real, pero ten en cuenta que necesitarás permisos para tarjetas.
+  const clientId = 'sb';  // <--- CAMBIA TEMPORALMENTE A 'sb' PARA PROBAR
 
   const paypalOptions = {
     clientId,
     currency: 'USD',
     intent: 'capture',
+    // Deshabilitamos explícitamente los componentes de tarjeta embebidos
+    components: 'paypal-payments',   // Solo botón de PayPal, sin card-fields
+    'disable-funding': 'card',       // Oculta el botón de "pagar con tarjeta" directo
+    'enable-funding': 'paypal',      // Solo PayPal (y dentro de él, el usuario puede pagar como invitado con tarjeta)
   };
 
   return (
