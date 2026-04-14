@@ -6,7 +6,7 @@ import { useLanguage } from 'context/LanguageContext';
 const Donations: React.FC = () => {
   const { t } = useLanguage();
   const [{ isPending, isResolved, isRejected }] = usePayPalScriptReducer();
-  
+
   const donationAmount = '10.00';
 
   const handlePayPalError = (err: any) => {
@@ -100,26 +100,14 @@ const Donations: React.FC = () => {
                   createOrder={(data, actions) => {
                     return actions.order.create({
                       intent: 'CAPTURE',
-                      purchase_units: [
-                        {
-                          amount: {
-                            value: donationAmount,
-                            currency_code: 'USD',
-                          },
-                          description: 'Donación a la iglesia',
-                        },
-                      ],
+                      purchase_units: [{
+                        amount: { value: donationAmount, currency_code: 'USD' },
+                        description: 'Donación a la iglesia',
+                      }],
                     });
                   }}
                   onApprove={async (data, actions) => {
-                    if (actions.order) {
-                      const details = await actions.order.capture();
-                      console.log('Donación completada:', details);
-                      alert(`¡Gracias por tu donación de $${donationAmount} USD! Tu contribución ha sido procesada exitosamente.`);
-                    }
-                  }}
-                  onCancel={() => {
-                    alert('Donación cancelada. Puedes volver a intentarlo cuando desees.');
+                    alert(`¡Gracias por tu donación!`);
                   }}
                   onError={handlePayPalError}
                 />

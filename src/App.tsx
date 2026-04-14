@@ -46,16 +46,12 @@ const HomePage: React.FC = () => (
 const App: React.FC = () => {
   // **IMPORTANTE:** Prueba primero con 'sb' (sandbox público)
   // Si funciona, cambia a tu clientId real, pero ten en cuenta que necesitarás permisos para tarjetas.
-  const clientId = 'sb';  // <--- CAMBIA TEMPORALMENTE A 'sb' PARA PROBAR
+  const clientId = 'AYPvlPM3pFY86JZQOGkLCsvd49DsP7CwTXjdaeUqbPtrRRZqw6D96H5IDndpKP1yY5muToB_bY5RWPpu';  // <--- CAMBIA TEMPORALMENTE A 'sb' PARA PROBAR
 
   const paypalOptions = {
     clientId,
     currency: 'USD',
     intent: 'capture',
-    // Deshabilitamos explícitamente los componentes de tarjeta embebidos
-    components: 'paypal-payments',   // Solo botón de PayPal, sin card-fields
-    'disable-funding': 'card',       // Oculta el botón de "pagar con tarjeta" directo
-    'enable-funding': 'paypal',      // Solo PayPal (y dentro de él, el usuario puede pagar como invitado con tarjeta)
   };
 
   return (
