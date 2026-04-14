@@ -53,7 +53,14 @@
     <!-- Título del sitio -->
     <title>Ministerio Vida Eterna | Campamento Vida Eterna en Honduras</title>
     
-    <!-- Estilos críticos inline (opcional) -->
+    <!-- Script de PayPal (botón hospedado) - AGREGADO -->
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=BAA-9UWod6JzuQiExo9bgB8p8HS5eaoa1eUO4jfgRrm8COM1wKXTXurArrrf_tYdo8Ref1LEIk24pinUG8&components=hosted-buttons&disable-funding=venmo&currency=USD"
+      crossorigin="anonymous"
+      async>
+    </script>
+    
+    <!-- Estilos críticos inline -->
     <style>
       /* Preloader básico */
       #root-loading {
@@ -66,19 +73,16 @@
         font-family: 'Inter', sans-serif;
       }
       
-      /* Asegurar que las imágenes no se desborden */
       img {
         max-width: 100%;
         height: auto;
       }
       
-      /* Mejoras de accesibilidad */
       :focus {
         outline: 2px solid #3b82f6;
         outline-offset: 2px;
       }
       
-      /* Animación de carga */
       @keyframes pulse {
         0%, 100% { opacity: 1; }
         50% { opacity: 0.5; }
@@ -89,7 +93,7 @@
       }
     </style>
     
-    <!-- Analytics (reemplaza con tu ID) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -98,7 +102,7 @@
       gtag('config', 'G-XXXXXXXXXX');
     </script>
     
-    <!-- Schema.org para SEO -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -124,10 +128,8 @@
       ]
     }
     </script>
-    
   </head>
   <body>
-    <!-- Pantalla de carga mientras React se inicia -->
     <div id="root-loading" style="display: none;">
       <div class="loading-spinner" style="text-align: center;">
         <div style="font-size: 2rem; margin-bottom: 1rem;">⛪</div>
@@ -136,66 +138,32 @@
       </div>
     </div>
     
-    <!-- Contenedor principal de React -->
     <noscript>
-      <div style="
-        text-align: center; 
-        padding: 2rem; 
-        background: #f8f9fa; 
-        color: #333; 
-        font-family: sans-serif;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      ">
-        <h1 style="color: #1e40af; font-size: 2rem; margin-bottom: 1rem;">
-          ⛪ Ministerio Vida Eterna
-        </h1>
-        <p style="font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem;">
-          Para disfrutar de nuestra página web, necesitas habilitar JavaScript en tu navegador.
-        </p>
+      <div style="text-align: center; padding: 2rem; background: #f8f9fa; color: #333; font-family: sans-serif; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1 style="color: #1e40af; font-size: 2rem; margin-bottom: 1rem;">⛪ Ministerio Vida Eterna</h1>
+        <p style="font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem;">Para disfrutar de nuestra página web, necesitas habilitar JavaScript en tu navegador.</p>
         <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
           <h2 style="color: #1e40af; margin-bottom: 1rem;">Información de contacto</h2>
           <p><strong>📍 Dirección:</strong> Calle de la Fe, Honduras</p>
           <p><strong>📞 Teléfono:</strong> +504 XXXX-XXXX</p>
           <p><strong>🕐 Horarios:</strong> Domingos 9:00 AM y 6:00 PM</p>
-          <p style="margin-top: 1.5rem; font-style: italic;">
-            "Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar."<br>
-            <strong>Mateo 11:28</strong>
-          </p>
+          <p style="margin-top: 1.5rem; font-style: italic;">"Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar."<br><strong>Mateo 11:28</strong></p>
         </div>
       </div>
     </noscript>
     
     <div id="root"></div>
     
-    <!-- Script para manejar la pantalla de carga -->
     <script>
-      // Mostrar pantalla de carga mientras React se inicializa
       document.getElementById('root-loading').style.display = 'flex';
-      
-      // Ocultar cuando React termine de cargar
-      window.addEventListener('DOMContentLoaded', (event) => {
-        // React normalmente oculta el div#root-loading automáticamente
-        // pero por si acaso, lo ocultamos después de un tiempo
+      window.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           const loadingDiv = document.getElementById('root-loading');
-          if (loadingDiv) {
-            loadingDiv.style.display = 'none';
-          }
+          if (loadingDiv) loadingDiv.style.display = 'none';
         }, 500);
       });
-      
-      // Detectar si es un dispositivo móvil
       window.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-      
-      // Mejora de experiencia táctil para móviles
-      if (window.isMobile) {
-        document.body.classList.add('mobile-device');
-      }
+      if (window.isMobile) document.body.classList.add('mobile-device');
     </script>
-    
   </body>
 </html>

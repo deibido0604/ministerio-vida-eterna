@@ -1,38 +1,42 @@
-import React from 'react';
-import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
+import React, { useEffect } from 'react';
 import { Heart, Shield, Gift } from 'lucide-react';
 import { useLanguage } from 'context/LanguageContext';
 
+// Declaración local del tipo (opcional, también puede ir en un archivo .d.ts)
+declare global {
+  interface Window {
+    paypal?: {
+      HostedButtons: (options: { hostedButtonId: string }) => {
+        render: (selector: string) => void;
+      };
+    };
+  }
+}
+
 const Donations: React.FC = () => {
   const { t } = useLanguage();
-  const [{ isPending, isResolved, isRejected }] = usePayPalScriptReducer();
 
-  const donationAmount = '10.00';
+  useEffect(() => {
+    let retryCount = 0;
+    const maxRetries = 20; // 20 * 300ms = 6 segundos máximo
 
-  const handlePayPalError = (err: any) => {
-    console.error('PayPal error:', err);
-    alert('Hubo un error al procesar tu donación. Por favor, intenta de nuevo más tarde.');
-  };
+    const renderPayPalButton = () => {
+      // Verificar que el SDK de PayPal esté cargado
+      if (window.paypal && window.paypal.HostedButtons) {
+        window.paypal.HostedButtons({
+          hostedButtonId: "RQ7CYVG92BDPJ"
+        }).render("#paypal-container-RQ7CYVG92BDPJ");
+      } else if (retryCount < maxRetries) {
+        retryCount++;
+        setTimeout(renderPayPalButton, 300);
+      } else {
+        console.error('PayPal SDK no se cargó después de varios intentos');
+        // Opcional: mostrar un mensaje de error al usuario
+      }
+    };
 
-  if (isRejected) {
-    return (
-      <section id="donations" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
-        <div className="container mx-auto px-4 text-center">
-          <div className="bg-white p-8 rounded-xl shadow-lg max-w-md mx-auto">
-            <p className="text-red-600 mb-4">
-              No se pudo cargar PayPal. Verifica tu conexión o desactiva extensiones del navegador que puedan bloquearlo.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-            >
-              Reintentar
-            </button>
-          </div>
-        </div>
-      </section>
-    );
-  }
+    renderPayPalButton();
+  }, []);
 
   return (
     <section id="donations" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
@@ -83,36 +87,12 @@ const Donations: React.FC = () => {
             </div>
           </div>
 
-          {/* Columna derecha: botón de PayPal */}
+          {/* Columna derecha: botón de PayPal hospedado */}
           <div className="bg-white p-8 rounded-xl shadow-xl">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('donations.onlineDonation')}</h3>
-
-            {isPending ? (
-              <div className="text-center py-8">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-                <p className="mt-4 text-gray-600">Cargando PayPal...</p>
-              </div>
-            ) : isResolved ? (
-              <div className="space-y-4">
-                <p className="text-gray-700">Monto sugerido: <strong>${donationAmount} USD</strong></p>
-                <PayPalButtons
-                  style={{ layout: 'vertical', color: 'blue', shape: 'rect', label: 'paypal' }}
-                  createOrder={(data, actions) => {
-                    return actions.order.create({
-                      intent: 'CAPTURE',
-                      purchase_units: [{
-                        amount: { value: donationAmount, currency_code: 'USD' },
-                        description: 'Donación a la iglesia',
-                      }],
-                    });
-                  }}
-                  onApprove={async (data, actions) => {
-                    alert(`¡Gracias por tu donación!`);
-                  }}
-                  onError={handlePayPalError}
-                />
-              </div>
-            ) : null}
+            
+            {/* Contenedor donde PayPal renderizará el botón hospedado */}
+            <div id="paypal-container-RQ7CYVG92BDPJ"></div>
 
             <div className="text-sm text-gray-500 bg-blue-50 p-4 rounded-lg mt-6">
               <p className="flex items-center">
