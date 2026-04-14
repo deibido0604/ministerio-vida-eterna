@@ -68,6 +68,7 @@ const App: React.FC = () => {
     clientId,
     currency: 'USD',
     intent: 'capture',
+    components: 'buttons,hosted-fields',
     'enable-funding': 'paypal,card',
     'disable-funding': 'venmo,paylater',
     locale: 'es_HN',

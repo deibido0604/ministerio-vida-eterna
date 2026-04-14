@@ -9,6 +9,12 @@ const Donations: React.FC = () => {
   const isValidAmount = true;
   const [paypalLoaded, setPaypalLoaded] = React.useState(false);
 
+  const handlePayPalError = (err: any) => {
+    console.error('PayPal error:', err);
+    const message = err?.details?.[0]?.description || err?.message || 'Hubo un error procesando tu donación. Por favor, intenta de nuevo.';
+    alert(message);
+  };
+
   useEffect(() => {
     // Verificar si PayPal SDK está cargado
     const checkPayPal = () => {
@@ -137,10 +143,11 @@ const Donations: React.FC = () => {
                           alert('¡Gracias por tu donación! Tu contribución ha sido procesada exitosamente.');
                         }
                       }}
-                      onError={(err) => {
-                        console.error('PayPal error:', err);
-                        alert('Hubo un error procesando tu donación. Por favor, intenta de nuevo.');
+                      onCancel={() => {
+                        console.log('PayPal donation cancelled');
+                        alert('Donación cancelada. Si deseas continuar, intenta nuevamente.');
                       }}
+                      onError={handlePayPalError}
                     />
                   )}
                 </div>
@@ -178,10 +185,11 @@ const Donations: React.FC = () => {
                           alert('¡Gracias por tu donación! Tu contribución ha sido procesada exitosamente.');
                         }
                       }}
-                      onError={(err) => {
-                        console.error('PayPal error:', err);
-                        alert('Hubo un error procesando tu donación. Por favor, intenta de nuevo.');
+                      onCancel={() => {
+                        console.log('PayPal card donation cancelled');
+                        alert('Donación cancelada. Si deseas continuar, intenta nuevamente.');
                       }}
+                      onError={handlePayPalError}
                     />
                   )}
                 </div>
