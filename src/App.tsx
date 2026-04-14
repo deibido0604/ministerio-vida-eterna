@@ -11,9 +11,7 @@ import Contact from './components/Contact';
 import History from 'components/History';
 import Projects from 'components/Projects';
 
-interface ScrollToHashProps {}
-
-const ScrollToHash: React.FC<ScrollToHashProps> = () => {
+const ScrollToHash: React.FC = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -21,20 +19,15 @@ const ScrollToHash: React.FC<ScrollToHashProps> = () => {
       if (location.hash) {
         const id = location.hash.replace('#', '');
         const element = document.getElementById(id);
-        
         if (element) {
           requestAnimationFrame(() => {
-            element.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
           });
         }
       } else {
         window.scrollTo(0, 0);
       }
     };
-
     handleHashScroll();
   }, [location]);
 
@@ -58,13 +51,11 @@ const HomePage: React.FC = () => {
 
 const App: React.FC = () => {
   const clientId = "AYPvlPM3pFY86JZQOGkLCsvd49DsP7CwTXjdaeUqbPtrRRZqw6D96H5IDndpKP1yY5muToB_bY5RWPpu";
+
   const paypalOptions = {
     clientId,
     currency: 'USD',
     intent: 'capture',
-    'enable-funding': 'paypal,card',
-    'disable-funding': 'venmo,paylater',
-    locale: 'es_HN',
   };
 
   return (
