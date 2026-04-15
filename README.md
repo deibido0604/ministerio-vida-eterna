@@ -17,7 +17,6 @@ Esta aplicacion incluye:
 - TypeScript
 - React Router DOM
 - Tailwind CSS + PostCSS
-- @paypal/react-paypal-js
 - Lucide React
 
 ## Requisitos
@@ -94,7 +93,6 @@ ministerio-vida-eterna/
 
 ## Donaciones
 
-- La seccion de donaciones usa PayPalButtons.
 - Se crean ordenes con montos predefinidos y captura en el flujo onApprove.
 
 ## Despliegue
