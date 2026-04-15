@@ -7,7 +7,7 @@ const Donations: React.FC = () => {
   const { t } = useLanguage();
 
   // URL de tu botón hospedado (puedes obtener el enlace desde el panel de PayPal)
-  const paypalDonationUrl = "https://www.paypal.com/donate?hosted_button_id=RQ7CYVG92BDPJ";
+  const paypalDonationUrl = "https://www.paypal.com/ncp/payment/BSD2E5NCNREAY";
 
   return (
     <section id="donations" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
