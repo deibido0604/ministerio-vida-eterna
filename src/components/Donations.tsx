@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Heart, Shield, Gift } from 'lucide-react';
+import { Heart, Shield } from 'lucide-react';
 import { useLanguage } from 'context/LanguageContext';
 
 declare global {
