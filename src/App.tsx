@@ -7,8 +7,8 @@ import Trips from './components/Trips';
 import Ministries from './components/Ministries';
 import Donations from './components/Donations';
 import Contact from './components/Contact';
-import History from 'components/History';
-import Projects from 'components/Projects';
+import History from './components/History';
+import Projects from './components/Projects';
 
 const ScrollToHash: React.FC = () => {
   const location = useLocation();

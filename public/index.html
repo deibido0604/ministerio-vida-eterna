@@ -2,131 +2,38 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    
-    <!-- Favicon y logos -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
-    
-    <!-- Meta tags esenciales -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#1e40af" />
-    <meta name="description" content="Ministerio Vida Eterna - Un lugar de encuentro con Dios, crecimiento espiritual y comunidad cristiana. Únete a nuestro campamento Vida Eterna en Honduras." />
-    
-    <!-- Open Graph para redes sociales -->
+    <meta name="description" content="Ministerio Vida Eterna - Un lugar de encuentro con Dios" />
     <meta property="og:title" content="Ministerio Vida Eterna - Campamento Vida Eterna" />
-    <meta property="og:description" content="Transformamos vidas a través del amor de Cristo. Únete a nuestra familia espiritual y descubre el propósito de Dios para ti." />
+    <meta property="og:description" content="Transformamos vidas a través del amor de Cristo." />
     <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
     <meta property="og:url" content="https://ministeriovidaeterna.org" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Ministerio Vida Eterna" />
-    <meta property="og:locale" content="es_HN" />
-    
-    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ministerio Vida Eterna - Campamento Vida Eterna" />
-    <meta name="twitter:description" content="Transformamos vidas a través del amor de Cristo. Únete a nuestra familia espiritual." />
-    <meta name="twitter:image" content="%PUBLIC_URL%/twitter-image.jpg" />
-    
-    <!-- Keywords para SEO -->
-    <meta name="keywords" content="iglesia, ministerio, cristiano, evangelio, Honduras, campamento, fe, vida eterna, comunidad cristiana, estudio bíblico, alabanza, adoración" />
-    
-    <!-- Autor y derechos -->
-    <meta name="author" content="Ministerio Vida Eterna" />
-    <meta name="copyright" content="Ministerio Vida Eterna" />
-    
-    <!-- Geo tags -->
-    <meta name="geo.region" content="HN" />
-    <meta name="geo.placename" content="Honduras" />
-    
-    <!-- Manifest para PWA -->
+    <meta name="keywords" content="iglesia, ministerio, cristiano, evangelio, Honduras" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <!-- Preconnect para fuentes externas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Fuentes de Google -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Ministerio Vida Eterna | Campamento Vida Eterna</title>
+    <style>
+      #root-loading { display: flex; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; font-family: 'Inter', sans-serif; }
+      img { max-width: 100%; height: auto; }
+      :focus { outline: 2px solid #3b82f6; outline-offset: 2px; }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+      .loading-spinner { animation: pulse 1.5s ease-in-out infinite; }
+    </style>
     
-    <!-- Título del sitio -->
-    <title>Ministerio Vida Eterna | Campamento Vida Eterna en Honduras</title>
-    
-    <!-- Script de PayPal (botón hospedado) - AGREGADO -->
+    <!-- PARTE 1: SDK de PayPal (solo hosted-buttons) -->
     <script
       src="https://www.paypal.com/sdk/js?client-id=BAA-9UWod6JzuQiExo9bgB8p8HS5eaoa1eUO4jfgRrm8COM1wKXTXurArrrf_tYdo8Ref1LEIk24pinUG8&components=hosted-buttons&disable-funding=venmo&currency=USD"
       crossorigin="anonymous"
       async>
-    </script>
-    
-    <!-- Estilos críticos inline -->
-    <style>
-      /* Preloader básico */
-      #root-loading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-        color: white;
-        font-family: 'Inter', sans-serif;
-      }
-      
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      
-      :focus {
-        outline: 2px solid #3b82f6;
-        outline-offset: 2px;
-      }
-      
-      @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.5; }
-      }
-      
-      .loading-spinner {
-        animation: pulse 1.5s ease-in-out infinite;
-      }
-    </style>
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Ministerio Vida Eterna",
-      "alternateName": "Campamento Vida Eterna",
-      "url": "https://ministeriovidaeterna.org",
-      "logo": "%PUBLIC_URL%/logo.png",
-      "description": "Ministerio cristiano dedicado al crecimiento espiritual, evangelismo y servicio comunitario en Honduras.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "HN",
-        "addressLocality": "Honduras"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+504-XXXX-XXXX",
-        "contactType": "Customer Service"
-      },
-      "sameAs": [
-        "https://www.facebook.com/ministeriovidaeterna",
-        "https://www.instagram.com/ministeriovidaeterna"
-      ]
-    }
     </script>
   </head>
   <body>
@@ -137,7 +44,6 @@
         <p style="opacity: 0.8;">Cargando bendiciones...</p>
       </div>
     </div>
-    
     <noscript>
       <div style="text-align: center; padding: 2rem; background: #f8f9fa; color: #333; font-family: sans-serif; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
         <h1 style="color: #1e40af; font-size: 2rem; margin-bottom: 1rem;">⛪ Ministerio Vida Eterna</h1>
@@ -151,14 +57,54 @@
         </div>
       </div>
     </noscript>
-    
     <div id="root"></div>
-    
+
+    <!-- PARTE 2: Inicialización del botón hospedado (espera a que exista el div y PayPal esté listo) -->
+    <script>
+      (function() {
+        var maxAttempts = 40;      // 40 * 300ms = 12 segundos
+        var attempt = 0;
+        var interval = null;
+
+        function tryRender() {
+          var container = document.getElementById("paypal-container-KBCZAYJMPPZHQ");
+          var isPaypalReady = window.paypal && window.paypal.HostedButtons;
+
+          if (container && isPaypalReady) {
+            clearInterval(interval);
+            try {
+              window.paypal.HostedButtons({
+                hostedButtonId: "KBCZAYJMPPZHQ"
+              }).render("#paypal-container-KBCZAYJMPPZHQ");
+              console.log("✅ Botón de PayPal renderizado correctamente");
+            } catch (err) {
+              console.error("❌ Error al renderizar el botón:", err);
+            }
+          } else {
+            attempt++;
+            if (attempt >= maxAttempts) {
+              clearInterval(interval);
+              console.error("❌ No se pudo renderizar el botón de PayPal después de", maxAttempts, "intentos.");
+              if (!container) console.error("   - El contenedor #paypal-container-KBCZAYJMPPZHQ no existe en el DOM");
+              if (!isPaypalReady) console.error("   - PayPal HostedButtons no está disponible");
+              // Opcional: mostrar un mensaje de error al usuario
+              var containerElem = document.getElementById("paypal-container-KBCZAYJMPPZHQ");
+              if (containerElem) {
+                containerElem.innerHTML = '<p class="text-red-600">No se pudo cargar el botón de PayPal. Recarga la página o intenta más tarde.</p>';
+              }
+            }
+          }
+        }
+
+        interval = setInterval(tryRender, 300);
+      })();
+    </script>
+
     <script>
       document.getElementById('root-loading').style.display = 'flex';
-      window.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => {
-          const loadingDiv = document.getElementById('root-loading');
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          var loadingDiv = document.getElementById('root-loading');
           if (loadingDiv) loadingDiv.style.display = 'none';
         }, 500);
       });
