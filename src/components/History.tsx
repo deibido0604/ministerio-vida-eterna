@@ -26,7 +26,7 @@ const History: React.FC = () => {
                 Tras una visita como voluntarios con su hijo <span className="font-semibold text-gray-900">Javier</span>, vieron las necesidades hospitalarias y de pobreza extrema que se atravesaban en la región, y la bondad de Dios motivó a comenzar con niños trayendo brigadas médicas junto al mensaje transformador de Jesucristo.
               </p>
               <p>
-                Con ese propósito llegaron los misioneros <span className="font-semibold text-gray-900">Fernando</span> y <span className="font-semibold text-gray-900">Gleni</span>, atendiendo el llamado para darle vida a la misión y preparando un equipo juvenil de misioneros que llevará el mensaje de salvación a la siguiente generación, soñando y trabajando en el desarrollo de programas que cumplan la visión y misión que Dios nos encomendó.
+                Con ese propósito llegaron los misioneros <span className="font-semibold text-gray-900">Fernando Alvarado</span> y <span className="font-semibold text-gray-900">Gleni Ochoa</span>, atendiendo el llamado para darle vida a la misión y preparando un equipo juvenil de misioneros que llevará el mensaje de salvación a la siguiente generación, soñando y trabajando en el desarrollo de programas que cumplan la visión y misión que Dios nos encomendó.
               </p>
             </div>
             <div className="mt-8 flex justify-center">

@@ -35,7 +35,7 @@ const Header: React.FC = () => {
             <div className="relative h-12 w-12 overflow-hidden rounded-full shadow-lg group-hover:scale-105 transition-transform duration-300">
               <img
                 src="https://images.unsplash.com/photo-1544830297-71c9c63d66b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-                alt="Campamento Ministerios de Vida Eterna"
+                alt="Campamento Ministerios Vida Eterna"
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-blue-600/20"></div>
