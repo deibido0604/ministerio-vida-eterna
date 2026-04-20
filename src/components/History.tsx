@@ -17,7 +17,18 @@ const History: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+          {/* Columna izquierda: imagen 05 arriba, luego texto, luego imagen 06 abajo */}
           <div className="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
+            {/* Imagen 05 (arriba) */}
+            <div className="flex justify-center mb-6">
+              <img
+                src="/images/Actividades/WhatsApp%20Image%202026-03-21%20at%202.38.05%20PM.jpeg"
+                alt="Equipo de ministerio"
+                className="w-full max-w-xs rounded-3xl border border-gray-200 shadow-sm"
+              />
+            </div>
+
+            {/* Texto de la historia */}
             <div className="space-y-8 text-gray-700 leading-relaxed text-lg lg:text-xl text-justify">
               <p>
                 Dios dio la visión a los misioneros <span className="font-semibold text-gray-900">Víctor Solórzano</span> y <span className="font-semibold text-gray-900">Doris Hernández</span> al fundar Ministerios Campamento Vida Eterna en Honduras.
@@ -29,15 +40,18 @@ const History: React.FC = () => {
                 Con ese propósito llegaron los misioneros <span className="font-semibold text-gray-900">Fernando Alvarado</span> y <span className="font-semibold text-gray-900">Gleni Ochoa</span>, atendiendo el llamado para darle vida a la misión y preparando un equipo juvenil de misioneros que llevará el mensaje de salvación a la siguiente generación, soñando y trabajando en el desarrollo de programas que cumplan la visión y misión que Dios nos encomendó.
               </p>
             </div>
-            <div className="mt-8 flex justify-center">
+
+            {/* Imagen 06 (abajo) */}
+            <div className="flex justify-center mt-6">
               <img
-                src="/images/Actividades/WhatsApp%20Image%202026-03-21%20at%202.38.05%20PM.jpeg"
-                alt="Equipo de ministerio"
-                className="w-full max-w-xs rounded-3xl border border-gray-200 shadow-sm opacity-80"
+                src="/images/Actividades/WhatsApp%20Image%202026-03-21%20at%202.38.06%20PM.jpeg"
+                alt="Actividad del ministerio"
+                className="w-full max-w-xs rounded-3xl border border-gray-200 shadow-sm"
               />
             </div>
           </div>
 
+          {/* Columna derecha: propósito, misión, visión, valores (sin cambios) */}
           <div className="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
             <div className="space-y-6">
               <div>
@@ -60,6 +74,7 @@ const History: React.FC = () => {
           </div>
         </div>
 
+        {/* Video de referencia (se mantiene) */}
         <div className="mt-12 flex justify-center">
           <div className="w-full max-w-4xl">
             <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">Video de referencia</h3>
